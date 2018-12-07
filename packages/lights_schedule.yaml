@@ -360,7 +360,7 @@ automation:
       - service: light.turn_on
         entity_id: group.kitchen
 #******************************************************************************
-  - alias: "Spegni Luce Cucina "
+  - alias: "Spegni Luce Cucina"
     trigger:
       - platform: state
         entity_id: binary_sensor.movimento_cucina
@@ -469,6 +469,11 @@ automation:
     action:
       - service: light.turn_on
         entity_id: light.camera
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_camera
+          rgb_color: [255, 255, 255]
+          brightness: 2
       - service: mqtt.publish
         data:
           topic: 'sensors/rf/receiver'
@@ -483,6 +488,8 @@ automation:
     action:
       - service: light.turn_off
         entity_id: light.camera
+      - service: light.turn_off
+        entity_id: light.led_strip_camera
 #******************************************************************************
   - alias: "Accende le luci sui comodini tutti i giorni alle 7.10 del lun al ven"
     trigger:

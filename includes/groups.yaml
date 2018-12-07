@@ -31,7 +31,7 @@
       - binary_sensor.movimento_cucina
       - binary_sensor.movimento_corridoio
       - binary_sensor.movimento_salotto
-      - binary_sensor.motion_sensor_rf_1
+      - binary_sensor.letto
       - binary_sensor.movimento_bagno_in_telemetria
       - binary_sensor.cancello
       - binary_sensor.luce_bagno
@@ -132,6 +132,7 @@
     name: Luci Camera
     entities:
       - light.camera
+      - light.led_strip_camera
 #******************************************************************************
   hdmi:
     name: Hdmi
@@ -523,6 +524,7 @@
     icon: mdi:hotel
     entities:
       - group.termostato_camera
+      - group.led_strip_controller_camera
       - history_graph.temperatura_camera
       - group.bedroom
   Tab_Tv:
