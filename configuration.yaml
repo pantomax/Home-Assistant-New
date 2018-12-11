@@ -69,9 +69,9 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
   port: 1883
-  client_id: home-assistant-1
-  keepalive: 60
-  protocol: 3.1 
+#  client_id: home-assistant-2
+  keepalive: 30
+#  protocol: 3.1 
 
 
 ############
