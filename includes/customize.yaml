@@ -49,12 +49,30 @@
     light.giardino:
       friendly_name: "Luce Giardino"
       icon: mdi:flower
+    light.luci_cucina_tutte:
+      friendly_name: "Luci Cucina"
+      icon: mdi:food
+    light.luci_corridoio_tutte:
+      friendly_name: "Luci Corridoio"
+      icon: mdi:door
+    light.luci_bagno_tutte:
+      friendly_name: "Luci Bagno"
+      icon: mdi:human-male-female
+    light.luci_camera_tutte:
+      friendly_name: "Luci Camera"
+      icon: mdi:hotel
+    light.luci_giardino_tutte:
+      friendly_name: "Luci Giardino"
+      icon: mdi:flower
     light.camera:
       friendly_name: "Luce Camera"
       icon: mdi:hotel
     light.bagno:
       friendly_name: "Luce Bagno"
       icon: mdi:human-male-female
+    light.insettivoro:
+      friendly_name: "Mappamondo"
+      icon: mdi:earth
     scene.buona_notte:
       entity_picture: /local/goodnight.png
     scene.corridoio_spento:
@@ -125,6 +143,9 @@
     sensor.dht_temperature:
       friendly_name : "Temperatura DHT"
       icon: mdi:thermometer-lines
+    binary_sensor.permetti_accensione_luci:
+      friendly_name : "Accensione Luci"
+      icon: mdi:flash
 #*********************************SCENES***************************************
     scene.luci_sala_accese:
       friendly_name: "Luci Sala Accese"

@@ -3,6 +3,124 @@
 #                                 SWITCHES
 #
 ###############################################################################
+#*************************** TUTTE LUCI CUCINA ********************************
+  - platform: template
+    switches:
+      luci_cucina_tutte:
+        value_template: >-
+          {% if (is_state('light.light_kitchen','on')) or
+          (is_state('light.light_kitchen_2','on')) %} 
+          on
+          {% else %}
+          off
+          {% endif %}
+        turn_on:
+        - service: light.turn_on
+          data:
+            entity_id: light.light_kitchen
+        - service: light.turn_on
+          data:
+            entity_id: light.light_kitchen_2
+        turn_off:
+        - service: light.turn_off
+          data:
+            entity_id: light.light_kitchen
+        - service: light.turn_off
+          data:
+            entity_id: light.light_kitchen_2
+#*************************** TUTTE LUCI BAGNO *********************************
+  - platform: template
+    switches:
+      luci_bagno_tutte:
+        value_template: >-
+          {% if (is_state('light.bagno','on')) or
+          (is_state('light.led_strip_bagno','on')) %} 
+          on
+          {% else %}
+          off
+          {% endif %}
+        turn_on:
+        - service: light.turn_on
+          data:
+            entity_id: light.bagno
+        - service: light.turn_on
+          data:
+            entity_id: light.led_strip_bagno
+        turn_off:
+        - service: light.turn_off
+          data:
+            entity_id: light.bagno
+        - service: light.turn_off
+          data:
+            entity_id: light.led_strip_bagno
+#*************************** TUTTE LUCI CORRIDOIO *****************************
+  - platform: template
+    switches:
+      luci_corridoio_tutte:
+        value_template: >-
+          {% if (is_state('light.corridoio_bagno','on')) or
+          (is_state('light.corridoio_porta','on')) %} 
+          on
+          {% else %}
+          off
+          {% endif %}
+        turn_on:
+        - service: light.turn_on
+          data:
+            entity_id: light.corridoio_bagno
+        - service: light.turn_on
+          data:
+            entity_id: light.corridoio_porta
+        turn_off:
+        - service: light.turn_off
+          data:
+            entity_id: light.corridoio_bagno
+        - service: light.turn_off
+          data:
+            entity_id: light.corridoio_porta
+#*************************** TUTTE LUCI CAMERA ********************************
+  - platform: template
+    switches:
+      luci_camera_tutte:
+        value_template: >-
+          {% if (is_state('light.camera','on')) or
+          (is_state('light.led_strip_camera','on')) %} 
+          on
+          {% else %}
+          off
+          {% endif %}
+        turn_on:
+        - service: light.turn_on
+          data:
+            entity_id: light.camera
+        - service: light.turn_on
+          data:
+            entity_id: light.led_strip_camera
+        turn_off:
+        - service: light.turn_off
+          data:
+            entity_id: light.camera
+        - service: light.turn_off
+          data:
+            entity_id: light.led_strip_camera
+#*************************** TUTTE LUCI GIRDINO ********************************
+  - platform: template
+    switches:
+      luci_giardino_tutte:
+        value_template: >-
+          {% if (is_state('light.giardino','on')) %} 
+          on
+          {% else %}
+          off
+          {% endif %}
+        turn_on:
+        - service: light.turn_on
+          data:
+            entity_id: light.giardino
+        turn_off:
+        - service: light.turn_off
+          data:
+            entity_id: light.giardino
 #*************************** LED TO GREEN LIGHT *******************************
   - platform: template
     switches:
@@ -68,7 +186,7 @@
   - platform: command_line
     switches:
       pc:
-        command_off: 'curl http://192.168.1.76:5001/shutdown'
+        command_off: 'curl http://192.168.1.14:5001/shutdown'
   - platform: wake_on_lan
     name: windowswol
     host: !secret computersalotto
