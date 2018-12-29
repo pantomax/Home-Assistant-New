@@ -90,7 +90,7 @@
       - input_select.house_mode
       - sensor.ring_front_door_battery
       - script.apricancello
-      - light.giardino
+#      - light.giardino
       - sensor.rf_receiver
 #******************************************************************************
   dhtsensor:
