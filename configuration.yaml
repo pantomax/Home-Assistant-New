@@ -62,7 +62,7 @@ http:
      - ::1
      - 192.168.1.0/24
      - 192.168.0.0/24
-     - !secret trusted_ip
+     - 2.234.144.0/24
 tts:
   - platform: google
     cache: true
