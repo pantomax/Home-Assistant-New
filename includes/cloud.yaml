@@ -104,11 +104,11 @@
         aliases:
           - luce blu nel corridoio
           - entity t 10
-    light.tv:
-      name: retro tv
-      aliases:
-        - luce sul retro della tv
-        - entity t 11
+      light.tv:
+        name: retro tv
+        aliases:
+          - luce sul retro della tv
+          - entity t 11
       light.soffitto:
         name: soffitto
         aliases:
