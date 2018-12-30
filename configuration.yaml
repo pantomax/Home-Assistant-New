@@ -62,7 +62,6 @@ http:
      - ::1
      - 192.168.1.0/24
      - 192.168.0.0/24
-     - 2.234.144.0/24
 tts:
   - platform: google
     cache: true
@@ -72,9 +71,7 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
   port: 1883
-#  client_id: home-assistant-2
   keepalive: 30
-#  protocol: 3.1 
 
 
 ############
@@ -105,4 +102,4 @@ sensor: !include includes/sensors.yaml
 switch: !include includes/switches.yaml
 weblink: !include includes/weblinks.yaml
 zone: !include includes/zones.yaml
-#cloud: !include includes/cloud.yaml
+cloud: !include includes/cloud.yaml
