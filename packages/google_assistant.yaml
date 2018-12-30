@@ -1,0 +1,318 @@
+###############################################################################
+#
+#                       GOOGLE ASSISTANT PACKAGE
+#
+###############################################################################
+#------------------------------------------------------------------------------
+google_assistant:
+#------------------------------------------------------------------------------
+  project_id: !secret google_project_id
+#  client_id: !secret google_client_id
+#  access_token: !secret google_access_token
+#  agent_user_id: !secret google_agent_user_id
+  api_key: !secret google_api_key
+  expose_by_default: false
+  exposed_domains:
+    - light
+#    - scene
+#    - switch
+#    - script
+#    - sensor
+  entity_config:
+#******************************************************************************
+#*******************************   LIGHTS  ************************************
+#******************************************************************************
+    light.tavolino:
+      name: tavolino
+      expose: true
+      aliases:
+        - luce sul tavolo
+        - entity t 1
+    light.libreria:
+      name: libreria
+      expose: true
+      aliases:
+        - luce sulla libreria
+        - entity t 2
+    light.mobile_tv:
+      name: mobile
+      expose: true
+      aliases:
+        - luce sul mobile
+        - entity t 3
+    light.retro_tv:
+      name: retro
+      expose: true
+      aliases:
+        - luce dietro
+        - entity t 4
+    light.light_desk:
+      name: scrivania
+      expose: true
+      aliases:
+        - luce sulla scrivania
+        - entity t 5
+    light.led_strip:
+      name: striscia led
+      expose: true
+      aliases:
+        - luce led
+        - entity t 6
+    light.light_kitchen:
+      name: lavandino
+      expose: true
+      aliases:
+        - luce lavandino
+        - entity t 7
+    light.light_kitchen_2:
+      name: entrata
+      expose: true
+      aliases:
+        - luce entrata
+        - entity t 8
+    light.corridoio_bagno:
+      name: bianca
+      expose: true
+      aliases:
+        - luce bianca nel corridoio
+        - entity t 9
+    light.corridoio_porta:
+      name: blu
+      expose: true
+      aliases:
+        - luce blu nel corridoio
+        - entity t 10
+#    light.tv:
+#      name: retro tv
+#      expose: true
+#      aliases:
+#        - luce sul retro della tv
+#        - entity t 11
+    light.soffitto:
+      name: soffitto
+      expose: true
+      aliases:
+        - luce che punta al soffitto
+        - entity t 12
+    light.giardino:
+      name: giardino
+      expose: true
+      aliases:
+        - luce in giardino
+        - entity t 13
+    light.camera:
+      name: camera da letto
+      expose: true
+      aliases:
+        - luce sotto il letto
+        - entity t 14
+    light.bagno:
+      name: bagno
+      expose: true
+      aliases:
+        - luce in bagno
+        - entity t 15
+#******************************************************************************
+#*******************************   SCENES  ************************************
+#******************************************************************************
+    scene.buona_notte:
+      name: notte
+      expose: true
+      aliases:
+        - fai una buona notte
+        - buonanotte
+        - buona notte
+        - scena buona notte
+        - modalità notte
+        - entity t 20
+    scene.corridoio_spento:
+      expose: true
+      name: corridoio
+      aliases:
+        - luci nel corridoio
+        - entity t 21
+    scene.film:
+      name: cinema
+      expose: true
+      aliases:
+        - luci cinema
+        - scena cinema
+        - modalità cinema
+        - entity t 22
+    scene.black_alert:
+      name: allarme nero
+      expose: true
+      aliases:
+        - allarme nero immediatamente
+        - entity t 23
+    scene.red_alert:
+      name: allarme rosso
+      expose: true
+      aliases:
+        - scena allarme rosso
+        - entity t 24
+    scene.foresta:
+      name: foresta
+      expose: true
+      aliases:
+        - scena foresta
+        - modalità foresta
+        - entity t 25
+    scene.inverno:
+      name: inverno
+      expose: true
+      aliases:
+        - scena inverno
+        - modalità inverno
+        - entity t 26
+    scene.oceano:
+      name: oceano
+      expose: true
+      aliases:
+        - scena oceano
+        - modalità oceano
+        - entity t 27
+    scene.club:
+      name: club
+      expose: true
+      aliases:
+        - scena club
+        - modalità club
+        - entity t 28
+    scene.acquario:
+      name: acquario
+      expose: true
+      aliases:
+        - scena acquario
+        - modalità acquario
+        - entity t 29
+    scene.hdmi_1:
+      name: canale 1
+      expose: true
+      aliases:
+        - hdmi 1
+        - entity t 29
+    scene.hdmi_2:
+      name: canale 2
+      expose: true
+      aliases:
+        - hdmi 2
+        - entity t 30
+    scene.hdmi_3:
+      name: canale 3
+      expose: true
+      aliases:
+        - hdmi 3
+        - entity t 31
+    scene.nhk:
+      name: nhk
+      expose: true
+      aliases:
+        - canale nhk
+        - entity t 32
+    scene.skyuno:
+      name: sky one
+      expose: true
+      aliases:
+        - canale sky one
+        - entity t 33
+    scene.skynews:
+      name: sky news
+      expose: true
+      aliases:
+        - canale sky news
+        - entity t 34
+#******************************************************************************
+#*****************************   SWITCHES  ************************************
+#******************************************************************************
+    switch.insettivoro:
+      name: ventilatore
+      expose: true
+      aliases:
+        - ventilatore 1
+        - entity t 40
+    switch.tv:
+      name: tv
+      expose: true
+      aliases:
+        - il televisore
+        - entity t 41
+    switch.sky_ir_power:
+      name: sky
+      expose: true
+      aliases:
+        - il ricevitore di sky
+        - entity t 49
+    switch.sky_button_pause:
+      name: pausa sky
+      expose: true
+      aliases:
+        - pausa su ricevitore sky
+        - entity t 47
+    switch.sky_button_play:
+      name: riproduci sky
+      expose: true
+      aliases:
+        - riproduzione su ricevitore sky
+        - entity t 48
+    switch.accendi_termostato_dashboard_bagno:
+      name: scalda il bagno
+      expose: true
+      aliases:
+        - termoventilatore 3
+        - entity t 42
+    switch.accendi_termostato_dashboard_salotto:
+      name: scalda il salotto
+      expose: true
+      aliases:
+        - termoventilatore 1
+        - entity t 43
+    switch.accendi_termostato_dashboard_camera:
+      name: scalda la camera
+      expose: true
+      aliases:
+        - termoventilatore 2
+        - entity t 44
+    switch.tv_volume:
+      name: volume
+      expose: true
+      aliases:
+        - il volume
+        - entity t 45
+    switch.nabaztaglife:
+      name: coniglio
+      expose: true
+      aliases:
+        - nabaztag
+        - entity t 46
+    switch.ventilatore_bagno:
+      name: Ventola1
+      expose: true
+#******************************************************************************
+#******************************   SCRIPTS  ************************************
+#******************************************************************************
+    script.apricancello:
+      name: cancello
+      expose: true
+      aliases:
+        - apriti sesamo
+        - lo stargate
+        - entity t 60
+#******************************************************************************
+#******************************   SENSORS  ************************************
+#******************************************************************************
+    sensor.dht_humidity:
+      name: umidità
+#      type: climate
+      expose: true
+      aliases:
+        - umidità vicino al server
+        - entity t 70
+    sensor.dht_temperature:
+      name: temperatura
+#      type: climate
+      expose: true
+      aliases:
+        - temperatura vicino al server
+        - entity t 71
+#******************************************************************************
