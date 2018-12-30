@@ -1,10 +1,53 @@
   google_actions:
     filter:
-#      include_entities:
-#        - light.kitchen
-#        - light.kitchen_left
-      include_domains:
-        - light
+      include_entities:
+        - light.tavolino
+        - light.libreria
+        - light.mobile_tv
+        - light.retro_tv
+        - light.light_desk
+        - light.led_strip
+        - light.light_kitchen
+        - light.light_kitchen_2
+        - light.corridoio_bagno
+        - light.corridoio_porta
+        - light.tv
+        - light.soffitto
+        - light.giardino
+        - light.camera
+        - light.bagno
+        - scene.buona_notte
+        - scene.corridoio_spento
+        - scene.film
+        - scene.black_alert
+        - scene.red_alert
+        - scene.foresta
+        - scene.inverno
+        - scene.oceano
+        - scene.club
+        - scene.acquario
+        - scene.hdmi_1
+        - scene.hdmi_2
+        - scene.hdmi_3
+        - scene.nhk
+        - scene.skyuno
+        - scene.skynews
+        - switch.insettivoro
+        - switch.tv
+        - switch.sky_ir_power
+        - switch.sky_button_pause
+        - switch.sky_button_play
+        - switch.accendi_termostato_dashboard_bagno
+        - switch.accendi_termostato_dashboard_salotto
+        - switch.accendi_termostato_dashboard_camera
+        - switch.tv_volume
+        - switch.nabaztaglife
+        - switch.ventilatore_bagno
+        - script.apricancello
+        - sensor.dht_humidity
+        - sensor.dht_temperature
+#      include_domains:
+#        - light
 #      exclude_entities:
 #        - switch.outside
     entity_config:
