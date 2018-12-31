@@ -56,7 +56,7 @@ google_assistant:
       name: striscia led
       expose: true
       aliases:
-        - luce led
+        - luce led salotto
         - entity t 6
     light.light_kitchen:
       name: lavandino
