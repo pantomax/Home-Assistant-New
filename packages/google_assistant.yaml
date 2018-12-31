@@ -229,7 +229,7 @@ google_assistant:
       name: ventilatore
       expose: true
       aliases:
-        - ventilatore 1
+        - ventilatore
         - entity t 40
     switch.tv:
       name: tv
