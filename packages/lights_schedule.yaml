@@ -128,7 +128,11 @@ automation:
 #******************************************************************************
   - alias: "Giorno"
     trigger:
-      platform: numeric_state
+      platform: time
+      minutes: '/5'
+      seconds: 00
+    condition:
+      condition: numeric_state
       entity_id: sensor.sunlight_pct
       above: 20
     action:
@@ -137,7 +141,11 @@ automation:
 #******************************************************************************
   - alias: "Notte"
     trigger:
-      platform: numeric_state
+      platform: time
+      minutes: '/5'
+      seconds: 00
+    condition:
+      condition: numeric_state
       entity_id: sensor.sunlight_pct
       below: 20
     action:
