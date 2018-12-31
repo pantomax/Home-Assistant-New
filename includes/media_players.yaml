@@ -3,25 +3,29 @@
 #                                 MEDIA PLAYERS
 #
 ###############################################################################
-  - platform: cast
-    host: !secret chromecast_salotto
-    name: Chromecast Salotto
-  - platform: cast
-    host: !secret chromecast_cucina
-    name: Chromecast Cucina
-  - platform: cast
-    host: !secret chromecast_bagno
-    name: Chromecast Bagno
-  - platform: kodi
-    host: !secret zidoo
-    username: !secret kodi_user
-    password: !secret kodi_password
-  - platform: mpd
-    host: !secret hassionew
+  media_player:
+    - host: 192.168.1.30
+    - host: 192.168.1.31
+    - host: 192.168.1.32
+    - host: 192.168.1.33
+    - host: 192.168.1.34
+    - host: 192.168.1.35
+    - host: 192.168.1.36
+    - host: 192.168.1.37
+    - host: 192.168.1.38
+    - host: 192.168.1.39
   - platform: universal
     name: allmediaplayers
     children:
       - media_player.bagno
       - media_player.salotto_nuovo
       - media_player.cucina
-#******************************************************************************
+  - platform: kodi
+    host: !secret zidoo
+    username: !secret kodi_user
+    password: !secret kodi_password
+  - platform: mpd
+    host: !secret hassionew
+
+
+

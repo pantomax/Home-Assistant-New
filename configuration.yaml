@@ -93,7 +93,7 @@ input_number: !include includes/input_number.yaml
 input_select: !include includes/input_select.yaml
 intent_script: !include includes/intent_scripts.yaml
 light: !include includes/light.yaml
-media_player: !include includes/media_players.yaml
+cast: !include includes/media_players.yaml
 notify: !include includes/notify.yaml
 panel_iframe: !include includes/panel_iframes.yaml
 scene: !include includes/scenes.yaml
