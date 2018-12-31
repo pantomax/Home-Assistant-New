@@ -14,18 +14,7 @@
     - host: 192.168.1.37
     - host: 192.168.1.38
     - host: 192.168.1.39
-  - platform: universal
-    name: allmediaplayers
-    children:
-      - media_player.bagno
-      - media_player.salotto_nuovo
-      - media_player.cucina
-  - platform: kodi
-    host: !secret zidoo
-    username: !secret kodi_user
-    password: !secret kodi_password
-  - platform: mpd
-    host: !secret hassionew
+
 
 
 
