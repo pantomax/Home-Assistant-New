@@ -3,6 +3,12 @@
 #                                 SCRIPTS
 #
 ###############################################################################
+  pause_and_play_chromecast:
+    alias: Pause/Play Chromecast with Dashbutton
+    sequence:
+      - service: media_player.media_play_pause
+        data:
+          entity_id: media_player.chromecastvideosalotto
 #******************************************************************************
   led_green_light:
     alias: Turn external led to green color
