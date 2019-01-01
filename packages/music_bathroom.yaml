@@ -42,7 +42,7 @@ sensor:
     volume_chromecast_bagno:
       value_template: >
         {% if is_state('media_player.batchroom', 'on')  %}
-          {{ states.media_player.chromecastaudiocucina.attributes.volume_level }}
+          {{ states.media_player.chromecastaudiobagno.attributes.volume_level }}
         {% else %}
           0
         {% endif %}
@@ -68,7 +68,7 @@ switch:
             entity_id: input_boolean.volume_radio_mute_bagno
         - service: media_player.volume_mute
           data_template:
-            entity_id: media_player.chromecastaudiocucina
+            entity_id: media_player.chromecastaudiobagno
             is_volume_muted: True
         turn_off:
         - service: input_boolean.turn_off
@@ -76,7 +76,7 @@ switch:
             entity_id: input_boolean.volume_radio_mute_bagno
         - service: media_player.volume_mute
           data_template:
-            entity_id: media_player.chromecastaudiocucina
+            entity_id: media_player.chromecastaudiobagno
             is_volume_muted: False
 #------------------------------------------------------------------------------
 script:
