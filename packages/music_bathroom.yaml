@@ -42,7 +42,7 @@ sensor:
     volume_chromecast_bagno:
       value_template: >
         {% if is_state('media_player.batchroom', 'on')  %}
-          {{ states.media_player.cucina.attributes.volume_level }}
+          {{ states.media_player.chromecastaudiocucina.attributes.volume_level }}
         {% else %}
           0
         {% endif %}
@@ -68,7 +68,7 @@ switch:
             entity_id: input_boolean.volume_radio_mute_bagno
         - service: media_player.volume_mute
           data_template:
-            entity_id: media_player.cucina
+            entity_id: media_player.chromecastaudiocucina
             is_volume_muted: True
         turn_off:
         - service: input_boolean.turn_off
@@ -76,7 +76,7 @@ switch:
             entity_id: input_boolean.volume_radio_mute_bagno
         - service: media_player.volume_mute
           data_template:
-            entity_id: media_player.cucina
+            entity_id: media_player.chromecastaudiocucina
             is_volume_muted: False
 #------------------------------------------------------------------------------
 script:
@@ -86,7 +86,7 @@ script:
     sequence:
       - service: media_player.turn_off
         data:
-          entity_id: media_player.bagno
+          entity_id: media_player.chromecastaudiobagno
       - service: input_number.set_value
         data_template:
           entity_id: input_number.numero_radio
@@ -97,7 +97,7 @@ script:
     sequence:
     - service: media_player.play_media
       data_template:
-        entity_id: media_player.bagno
+        entity_id: media_player.chromecastaudiobagno
         media_content_id: >
           {% if is_state("input_number.numero_radio", "1.0") %}
             http://mp3channels.webradio.antenne.de/workout-hits.aac
@@ -135,7 +135,7 @@ automation:
 #    action:
 #    - service: media_player.play_media
 #      data:
-#        entity_id: media_player.bagno
+#        entity_id: media_player.chromecastaudiobagno
 #        media_content_id: http://mp3channels.webradio.antenne.de/workout-hits.aac
 #        media_content_type: 'audio/mp4'
 #    - service: input_number.set_value
@@ -151,7 +151,7 @@ automation:
 #    action:
 #    - service: media_player.turn_off
 #      data:
-#        entity_id: media_player.bagno
+#        entity_id: media_player.chromecastaudiobagno
 #    - service: input_number.set_value
 #      data_template:
 #        entity_id: input_number.numero_radio
