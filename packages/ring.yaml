@@ -20,7 +20,7 @@ camera:
   - platform: ring
   - platform: ffmpeg
     name: last_ring_video
-    input: http://192.168.1.101:8123/local/last.mpg
+    input: https://192.168.1.101:8123/local/last.mpg
 #------------------------------------------------------------------------------
 automation:
 #------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/doorbell-1.mp3"
+          input: "https://192.168.1.101:8123/local/doorbell-1.mp3"
       - service: notify.notify
         data:
           message: "Campanello!"

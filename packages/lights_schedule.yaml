@@ -163,10 +163,18 @@ automation:
       service: light.turn_on
       entity_id: light.giardino
 #******************************************************************************
-  - alias: "Exterior Lighting off at 0.30"
+  - alias: "Exterior Lighting off at 23.30"
     trigger:
       platform: time
       at: '23:30:00'
+    action:
+      service: light.turn_off
+      entity_id: light.giardino
+#******************************************************************************
+  - alias: "Exterior Lighting off at 23.31"
+    trigger:
+      platform: time
+      at: '23:31:00'
     action:
       service: light.turn_off
       entity_id: light.giardino
@@ -194,11 +202,11 @@ automation:
       to: 'on'
     condition:
       condition: time
-      after: '23:30'
+      after: '22:00'
     action:
       service: light.turn_on
       entity_id: light.giardino
-
+#******************************************************************************
   - alias: Turn off kitchen light 10 minutes after last movement
     trigger:
       platform: state
@@ -780,7 +788,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_spente
 #******************************************************************************
@@ -793,7 +801,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
 #******************************************************************************
@@ -806,7 +814,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: light.turn_on
         data_template:
           entity_id: light.led_strip
@@ -822,7 +830,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.film
 #******************************************************************************
@@ -835,7 +843,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: light.turn_on
         data_template:
           entity_id: light.led_strip
@@ -851,7 +859,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: light.turn_on
         data_template:
           entity_id: light.led_strip
@@ -869,7 +877,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
   - alias: 'Accende luci salotto 2'
@@ -881,7 +889,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
   - alias: 'Accende luci salotto 3'
@@ -893,7 +901,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
   - alias: 'Accende luci salotto 4'
@@ -905,7 +913,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
   - alias: 'Accende luci salotto 5'
@@ -917,7 +925,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
   - alias: 'Accende luci salotto 6'
@@ -929,7 +937,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
   - alias: 'Accende luci salotto 7'
@@ -941,7 +949,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
   - alias: 'Accende luci salotto 8'
@@ -953,7 +961,7 @@ automation:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "http://192.168.1.101:8123/local/computerbeep_12.mp3"
+          input: "https://192.168.1.101:8123/local/computerbeep_12.mp3"
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
 #******************************************************************************
