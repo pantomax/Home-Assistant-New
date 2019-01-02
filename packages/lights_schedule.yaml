@@ -187,6 +187,33 @@ automation:
       service: light.turn_off
       entity_id: light.giardino
 #******************************************************************************
+  - alias: Turn on garden lights when there is movement 
+    trigger:
+      platform: state
+      entity_id: binary_sensor.ring_front_door_motion
+      to: 'on'
+    conditions:
+      condition: time
+      after: '23:30'
+    action:
+      service: light.turn_on
+      entity_id: light.giardino
+
+  - alias: Turn off kitchen light 10 minutes after last movement
+    trigger:
+      platform: state
+      entity_id: binary_sensor.ring_front_door_motion
+      to: 'off'
+      for:
+        minutes: 1
+    action:
+      - service: light.turn_off
+        entity_id: light.giardino
+      - service: light.turn_off
+        entity_id: light.giardino
+      - service: light.turn_off
+        entity_id: light.giardino
+#******************************************************************************
 #*****************************   CORRIDOIO   **********************************
 #******************************************************************************
   - alias: "Accendi Luci corridoio con sensore"
