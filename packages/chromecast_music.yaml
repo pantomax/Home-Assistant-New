@@ -9,7 +9,7 @@ sensor:
   - platform: template
     sensors:
       tipo_di_media:
-        value_template: '{{ states.media_player.salotto_nuovo.attributes.media_content_type }}'
+        value_template: '{{ states.media_player.chromecastvideosalotto.attributes.media_content_type }}'
   - platform: template
     sensors:
       tipo_di_media_bagno:
@@ -44,7 +44,7 @@ script:
              entity_id: sensor.tipo_di_media
              state: 'music'
            - condition: state
-             entity_id: media_player.salotto_nuovo
+             entity_id: media_player.chromecastvideosalotto
              state: 'playing'
       - delay:
           seconds: 1
@@ -108,7 +108,7 @@ automation:
   - alias: "Chromecast canzone successiva"
     trigger:
       - platform: state
-        entity_id: media_player.salotto_nuovo
+        entity_id: media_player.chromecastvideosalotto
         from: 'idle'
         to: 'playing'
     condition:
@@ -124,7 +124,7 @@ automation:
   - alias: "Chromecast pausa canzone"
     trigger:
       - platform: state
-        entity_id: media_player.salotto_nuovo
+        entity_id: media_player.chromecastvideosalotto
         from: 'paused'
         to: 'playing'
     condition:
@@ -144,5 +144,5 @@ automation:
         to: 'Offline'
     action:
          service: media_player.turn_off
-         entity_id: media_player.salotto_nuovo
+         entity_id: media_player.chromecastvideosalotto
 #******************************************************************************

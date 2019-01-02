@@ -18,7 +18,7 @@
       name: allmediaplayers
       children:
         - media_player.bagno
-        - media_player.salotto_nuovo
+        - media_player.chromecastvideosalotto
         - media_player.cucina
     - platform: kodi
       host: !secret zidoo
