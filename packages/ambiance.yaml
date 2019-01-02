@@ -315,10 +315,15 @@ script:
         data:
           entity_id: light.led_strip
           effect: blue_fade
-      - service: hassio.addon_stdin
+#      - service: hassio.addon_stdin
+#        data:
+#          addon: de3cd379_audio_player
+#          input: "https://192.168.1.101:8123/local/voybluealert.mp3"
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/voybluealert.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: "https://192.168.1.101:8123/local/voybluealert.mp3"
       - service: media_player.volume_set
         data:
           entity_id: media_player.chromecastvideosalotto
@@ -438,10 +443,15 @@ script:
         data:
           entity_id: light.led_strip
           effect: red_fade
-      - service: hassio.addon_stdin
+#      - service: hassio.addon_stdin
+#        data:
+#          addon: de3cd379_audio_player
+#          input: "https://192.168.1.101:8123/local/voyredalert.mp3"
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/voyredalert.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: "https://192.168.1.101:8123/local/voyredalert.mp3"
       - service: media_player.volume_set
         data:
           entity_id: media_player.chromecastvideosalotto
