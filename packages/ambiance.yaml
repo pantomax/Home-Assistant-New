@@ -328,7 +328,7 @@ script:
 #      - service: hassio.addon_stdin
 #        data:
 #          addon: de3cd379_audio_player
-#          input: "https://192.168.1.101:8123/local/voybluealert.mp3"
+#          input: "https://192.168.1.101:8123/local/voybluealert.mp3" 
       - service: media_player.play_media
         data:
           entity_id: media_player.chromecastaudiosalotto
