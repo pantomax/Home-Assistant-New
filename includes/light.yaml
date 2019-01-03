@@ -180,13 +180,13 @@
   - platform: template
     lights:
       camera:
-        value_template: "{{ is_state('switch.camera', 'on') }}"
+        value_template: "{{ is_state('switch.luce_rf_7', 'on') }}"
         turn_on:
           service: switch.turn_on
-          entity_id: switch.camera
+          entity_id: switch.luce_rf_7
         turn_off:
           service: switch.turn_off
-          entity_id: switch.camera
+          entity_id: switch.luce_rf_7
 #*********************************BAGNO****************************************
   - platform: template
     lights:
