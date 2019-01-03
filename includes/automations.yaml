@@ -67,10 +67,11 @@
       - service: notify.notify
         data:
           message: "Home Assistant è attivo."
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/computer_activate.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret computer_activate
       - service: group.set_visibility
         entity_id: group.airconditioner
         data:
@@ -113,8 +114,9 @@
       - service: notify.notify
         data:
           message: "Home Assistant è in riavvio."
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_off.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_off_2
 #******************************************************************************

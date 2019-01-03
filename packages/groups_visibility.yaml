@@ -16,10 +16,11 @@ automation:
       entity_id: group.webcam_casa
       data:
         visible: False
-    - service: hassio.addon_stdin
-      data:
-        addon: de3cd379_audio_player
-        input: "https://192.168.1.101:8123/local/tos-redalert.wav"
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret tos-redalert
 #******************************************************************************
   - alias: "Cambia Visibilita Gruppo Webcam"
     trigger:

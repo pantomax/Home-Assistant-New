@@ -63,10 +63,11 @@ script:
         data:
           entity_id: light.led_strip
           effect: red_strobe
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/voyredalert.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret voyredalert
       - alias: All lights On
         service: light.turn_on
       - delay:
@@ -90,10 +91,11 @@ script:
   pending_beep:
     alias: Pending Beep
     sequence:
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/alarm01.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret alarm01
       - alias: call_loop
         service: script.turn_on
         data:

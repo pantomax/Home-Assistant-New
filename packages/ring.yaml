@@ -50,10 +50,11 @@ automation:
         from: 'off'
         to: 'on'
     action:
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/doorbell-1.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret doorbell-1
       - service: notify.notify
         data:
           message: "Campanello!"

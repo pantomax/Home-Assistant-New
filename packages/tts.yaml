@@ -84,18 +84,20 @@ automation:
           - thu
           - fri
     action:
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/sensor.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret sensor
       - service: shell_command.remove_old_mp3_files
       - service: script.hassio_talk
         data_template:
           message: Buongiorno! In casa ci sono {{ states('sensor.temperatura_salotto_temperature') }} gradi mentre all'esterno la temperatura è di {{ states('sensor.dark_sky_temperature') }} gradi. Passate una buona giornata
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/sensor.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret sensor
 #******************************************************************************
   - alias: "TTS info morning message weekend"
     trigger:
@@ -112,18 +114,20 @@ automation:
           - sat
           - sun
     action:
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/sensor.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret sensor
       - service: shell_command.remove_old_mp3_files
       - service: script.hassio_talk
         data_template:
           message: Buongiorno! In casa ci sono {{ states('sensor.temperatura_salotto_temperature') }} gradi mentre all'esterno la temperatura è di {{ states('sensor.dark_sky_temperature') }} gradi. Passate una buona giornata
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/sensor.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret sensor
 #******************************************************************************
   - alias: "TTS info evening message"
     trigger:
@@ -134,18 +138,20 @@ automation:
       entity_id: 'input_boolean.mute'
       state: 'off'
     action:
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/sensor.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret sensor
       - service: shell_command.remove_old_mp3_files
       - service: script.hassio_talk
         data_template:
           message: Buonasera! In casa ci sono {{ states('sensor.temperatura_salotto_temperature') }} gradi mentre all'esterno la temperatura è di {{ states('sensor.dark_sky_temperature') }} gradi. 
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/sensor.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret sensor
 #******************************************************************************
   - alias: "Hassio Talk"
     trigger:

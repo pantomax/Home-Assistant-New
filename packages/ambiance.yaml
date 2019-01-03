@@ -375,10 +375,11 @@ script:
         data:
           entity_id: light.led_strip
           effect: blue_fade
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: !secret voybluealert
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: voybluealert
       - service: media_player.volume_set
         data:
           entity_id: media_player.chromecastvideosalotto
@@ -394,18 +395,21 @@ script:
           entity_id: light.led_strip
           color_name: blue
           brightness: 255
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: !secret computer_activate
-      - service: hassio.addon_stdin
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret computer_activate
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: !secret consolewarning
-      - service: hassio.addon_stdin
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret consolewarning
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: !secret intruderalertdeck8_ep
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret intruderalertdeck8_ep
       - service: light.turn_on
         data:
           entity_id: light.light_kitchen
@@ -413,10 +417,11 @@ script:
       - service: light.turn_off
         data:
           entity_id: light.light_kitchen
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: !secret automaticdefenseproceduresinitiated
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret automaticdefenseproceduresinitiated
       - delay: 00:00:20
       - service: media_player.volume_set
         data:

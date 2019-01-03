@@ -169,10 +169,11 @@ automation:
         after: '17:00:00'
         before: '18:30:00'
     action:
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/tng-doorbell.wav"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret tng-doorbell
 #******************************************************************************
   - alias: Mu at Home Notification
     trigger:

@@ -60,24 +60,25 @@
 #******************************************************************************
   power_down:
     sequence:
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/power_down.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret power_down
 #******************************************************************************
   local_radio:
     sequence:
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "http://icestreaming.rai.it/1.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: "http://icestreaming.rai.it/1.mp3"
 #******************************************************************************
   stop_audio_player:
     sequence:
-      - service: hassio.addon_stdin
+      - service: media_player.media_stop
         data:
-          addon: de3cd379_audio_player
-          input: ""
+          entity_id: media_player.chromecastaudiosalotto
 #******************************************************************************
   normal_mode:
     sequence:
