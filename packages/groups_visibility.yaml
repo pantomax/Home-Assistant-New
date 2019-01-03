@@ -16,11 +16,11 @@ automation:
       entity_id: group.webcam_casa
       data:
         visible: False
-    - service: media_player.play_media
-      data:
-        entity_id: media_player.chromecastaudiosalotto
-        media_content_type: "AUDIO"
-        media_content_id: !secret tos-redalert
+#    - service: media_player.play_media
+#      data:
+#        entity_id: media_player.chromecastaudiosalotto
+#        media_content_type: "AUDIO"
+#        media_content_id: !secret tos-redalert
 #******************************************************************************
   - alias: "Cambia Visibilita Gruppo Webcam"
     trigger:
