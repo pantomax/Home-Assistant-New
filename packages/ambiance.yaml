@@ -40,10 +40,11 @@ script:
     sequence:
       - service: homeassistant.turn_on
         entity_id: input_boolean.scene
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_on.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -78,23 +79,25 @@ script:
         data:
           entity_id: media_player.chromecastvideosalotto
           media_content_type: "VIDEO"
-          media_content_id: "https://192.168.1.101:8123/local/fireplace.mp4"
+          media_content_id: !secret fireplace
       - delay: 00:00:10
       - wait_template: "{{ states.media_player.chromecastvideosalotto.state == 'off' }}"
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_off_2.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_off_2
 #******************************************************************************
   foresta:
     alias: Ambiance Foresta
     sequence:
       - service: homeassistant.turn_on
         entity_id: input_boolean.scene
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_on.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -129,23 +132,25 @@ script:
         data:
           entity_id: media_player.chromecastvideosalotto
           media_content_type: "VIDEO"
-          media_content_id: "https://192.168.1.101:8123/local/forest.mp4"
+          media_content_id: !secret forest
       - delay: 00:00:10
       - wait_template: "{{ states.media_player.chromecastvideosalotto.state == 'off' }}"
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_off_2.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_off_2
 #******************************************************************************
   oceano:
     alias: Ambiance Oceano
     sequence:
       - service: homeassistant.turn_on
         entity_id: input_boolean.scene
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_on.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -180,23 +185,25 @@ script:
         data:
           entity_id: media_player.chromecastvideosalotto
           media_content_type: "VIDEO"
-          media_content_id: "https://192.168.1.101:8123/local/ocean.mp4"
+          media_content_id: !secret ocean
       - delay: 00:00:10
       - wait_template: "{{ states.media_player.chromecastvideosalotto.state == 'off' }}"
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_off_2.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_off_2
 #******************************************************************************
   club:
     alias: Ambiance Club
     sequence:
       - service: homeassistant.turn_on
         entity_id: input_boolean.scene
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_on.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -231,23 +238,25 @@ script:
         data:
           entity_id: media_player.chromecastvideosalotto
           media_content_type: "VIDEO"
-          media_content_id: "https://192.168.1.101:8123/local/club.mp4"
+          media_content_id: !secret club
       - delay: 00:00:10
       - wait_template: "{{ states.media_player.chromecastvideosalotto.state == 'off' }}"
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_off_2.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_off_2
 #******************************************************************************
   acquario:
     alias: Ambiance Aquario
     sequence:
       - service: homeassistant.turn_on
         entity_id: input_boolean.scene
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_on.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -282,13 +291,14 @@ script:
         data:
           entity_id: media_player.chromecastvideosalotto
           media_content_type: "VIDEO"
-          media_content_id: "https://192.168.1.101:8123/local/acquario.mp4"
+          media_content_id: !secret acquario
       - delay: 00:00:10
       - wait_template: "{{ states.media_player.chromecastvideosalotto.state == 'off' }}"
-      - service: hassio.addon_stdin
+      - service: media_player.play_media
         data:
-          addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/hologram_off_2.mp3"
+          entity_id: media_player.chromecastaudiosalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret hologram_off_2
 #******************************************************************************
   black_alert:
     alias: black_alert
@@ -323,7 +333,7 @@ script:
         data:
           entity_id: media_player.chromecastaudiosalotto
           media_content_type: "AUDIO"
-          media_content_id: "https://192.168.1.101:8123/local/voybluealert.mp3"
+          media_content_id: !secret voybluealert
       - service: media_player.volume_set
         data:
           entity_id: media_player.chromecastvideosalotto
@@ -332,7 +342,7 @@ script:
         data:
           entity_id: media_player.chromecastvideosalotto
           media_content_type: "VIDEO"
-          media_content_id: "https://192.168.1.101:8123/local/STBlueAlert.mp4"
+          media_content_id: !secret STBlueAlert
       - delay: 00:00:05
       - service: light.turn_on
         data:
@@ -368,7 +378,7 @@ script:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/voybluealert.mp3"
+          input: !secret voybluealert
       - service: media_player.volume_set
         data:
           entity_id: media_player.chromecastvideosalotto
@@ -377,7 +387,7 @@ script:
         data:
           entity_id: media_player.chromecastvideosalotto
           media_content_type: "VIDEO"
-          media_content_id: "https://192.168.1.101:8123/local/STBlueAlert.mp4"
+          media_content_id: !secret STBlueAlert
       - delay: 00:00:05
       - service: light.turn_on
         data:
@@ -387,15 +397,15 @@ script:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/computer_activate.mp3"
+          input: !secret computer_activate
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/consolewarning.mp3"
+          input: !secret consolewarning
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/intruderalertdeck8_ep.mp3"
+          input: !secret intruderalertdeck8_ep
       - service: light.turn_on
         data:
           entity_id: light.light_kitchen
@@ -406,7 +416,7 @@ script:
       - service: hassio.addon_stdin
         data:
           addon: de3cd379_audio_player
-          input: "https://192.168.1.101:8123/local/automaticdefenseproceduresinitiated.mp3"
+          input: !secret automaticdefenseproceduresinitiated
       - delay: 00:00:20
       - service: media_player.volume_set
         data:
@@ -416,7 +426,7 @@ script:
         data:
           entity_id: media_player.chromecastvideosalotto
           media_content_type: "VIDEO"
-          media_content_id: "https://192.168.1.101:8123/local/lcars.mp4"
+          media_content_id: !secret lcars
 #******************************************************************************
   red_alert:
     alias: red_alert
