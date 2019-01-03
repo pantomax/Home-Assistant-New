@@ -451,7 +451,7 @@ script:
         data:
           entity_id: media_player.chromecastaudiosalotto
           media_content_type: "AUDIO"
-          media_content_id: "https://192.168.1.101:8123/local/voyredalert.mp3"
+          media_content_id: !secret voyredalert
       - service: media_player.volume_set
         data:
           entity_id: media_player.chromecastvideosalotto
@@ -460,7 +460,7 @@ script:
         data:
           entity_id: media_player.chromecastvideosalotto
           media_content_type: "VIDEO"
-          media_content_id: "https://192.168.1.101:8123/local/STRedAlert.mp4"
+          media_content_id: !secret STRedAlert
       - delay: 00:00:15
       - service: light.turn_on
         data:
