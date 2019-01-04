@@ -277,11 +277,11 @@
       - binary_sensor.led_strip
       - binary_sensor.multipresa_wifi
       - input_boolean.visualizza_gruppo_dashbutton
-  nabaztag:
-    name: Nabaztag
-    entities:
-      - binary_sensor.nabaztag
-      - binary_sensor.netgear_repeater
+#  nabaztag:
+#    name: Nabaztag
+#    entities:
+#      - binary_sensor.nabaztag
+#      - binary_sensor.netgear_repeater
   wifi_shield_outlet:
     name: WIFI Shield
     entities:
@@ -628,15 +628,15 @@
       - camera.3_mantova_sud
       - camera.4_reggiolo
       - camera.5_raccordo_a1
-  Tab_Nabaztag:
-    name: Nabaztag
-    view: yes
-    icon: mdi:carrot
-    entities:
-      - group.nabaztag_utils
-      - group.nabaztag_body
-      - group.nabaztag_lights
-      - group.nabaztag_locale_setup
+#  Tab_Nabaztag:
+#    name: Nabaztag
+#    view: yes
+#    icon: mdi:carrot
+#    entities:
+#      - group.nabaztag_utils
+#      - group.nabaztag_body
+#      - group.nabaztag_lights
+#      - group.nabaztag_locale_setup
   Tab_sensors:
     name: Binary Sensors
     view: yes
