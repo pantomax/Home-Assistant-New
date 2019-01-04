@@ -26,11 +26,11 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 0
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 255
+          white_value: 0
       - service: media_player.turn_off
         data:
           entity_id: media_player.chromecastvideosalotto
@@ -60,7 +60,7 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 0
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -113,7 +113,7 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 0
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -166,7 +166,7 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 0
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -219,7 +219,7 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 0
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -272,7 +272,7 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 0
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -319,7 +319,7 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 0
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -369,7 +369,7 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 0
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -452,7 +452,7 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          brightness: 0
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
