@@ -805,7 +805,7 @@ automation:
     action:
       - service: media_player.play_media
         data:
-          entity_id: media_player.chromecastaudiobagno
+          entity_id: media_player.googlehomebagno
           media_content_type: "AUDIO"
           media_content_id: !secret computerbeep_12
       - service: mqtt.publish
