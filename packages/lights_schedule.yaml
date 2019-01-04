@@ -32,6 +32,9 @@ input_boolean:
   giorno:
     name: Giorno
     initial: On
+  disabilita_sensore_letto:
+    name: Sensore letto
+    initial:off
 #------------------------------------------------------------------------------
 input_number:
 #------------------------------------------------------------------------------
@@ -167,6 +170,9 @@ automation:
     trigger:
       platform: time
       at: '23:30:00'
+    condition:
+      condition: template
+      value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       service: light.turn_off
       entity_id: light.giardino
@@ -175,6 +181,9 @@ automation:
     trigger:
       platform: time
       at: '23:31:00'
+    condition:
+      condition: template
+      value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       service: light.turn_off
       entity_id: light.giardino
@@ -183,6 +192,9 @@ automation:
     trigger:
       platform: time
       at: '0:58:00'
+    condition:
+      condition: template
+      value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       service: light.turn_on
       entity_id: light.giardino
@@ -191,6 +203,9 @@ automation:
     trigger:
       platform: time
       at: '00:58:03'
+    condition:
+      condition: template
+      value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       service: light.turn_off
       entity_id: light.giardino
@@ -215,8 +230,12 @@ automation:
       for:
         minutes: 1
     condition:
-      condition: time
-      after: '23:30'
+    - condition: and
+      conditions:
+      - condition: time
+        after: '23:30'
+      - condition: template
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       - service: light.turn_off
         entity_id: light.giardino
@@ -256,6 +275,9 @@ automation:
       - platform: state
         entity_id: binary_sensor.movimento_corridoio
         to: 'off'
+    condition:
+      condition: template
+      value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       - service: switch.turn_off
         entity_id: switch.corridoio_bagno
@@ -513,39 +535,48 @@ automation:
         entity_id: binary_sensor.letto
         to: 'on'
     condition:
+    - condition: and
+      conditions:
       - condition: time
         after: '00:00:00'
         before: '7:00:00'
+      - condition: template
+        value_template: "{{ not is_state('input_boolean.disabilita_sensore_letto', 'off') }}"
     action:
       - service: light.turn_on
         data:
           entity_id: light.led_strip_camera
           rgb_color: [255, 0, 0]
-          brightness: 60
+          brightness: 40
       - service: light.turn_on
         data:
           entity_id: light.led_strip_camera
           rgb_color: [255, 0, 0]
-          brightness: 60
+          brightness: 40
       - service: light.turn_on
         data:
           entity_id: light.led_strip_camera
           rgb_color: [255, 0, 0]
-          brightness: 60
+          brightness: 40
       - service: mqtt.publish
         data:
           topic: 'sensors/rf/receiver'
           payload: '1111111'
           retain: 'true'
+#******************************************************************************
   - alias: 'Accendi luci di giorno'
     trigger:
       - platform: state
         entity_id: binary_sensor.letto
         to: 'on'
     condition:
+    - condition: and
+      conditions:
       - condition: time
         after: '7:00:00'
         before: '00:00:00'
+      - condition: template
+        value_template: "{{ not is_state('input_boolean.disabilita_sensore_letto', 'off') }}"
     action:
       - service: light.turn_on
         entity_id: light.camera
@@ -572,6 +603,9 @@ automation:
       - platform: state
         entity_id: binary_sensor.letto
         to: 'off'
+    condition:
+      condition: template
+      value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       - service: light.turn_off
         entity_id: light.camera
@@ -769,6 +803,11 @@ automation:
         entity_id: binary_sensor.motion_sensor_rf_5
         to: 'on'
     action:
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.chromecastaudiobagno
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
       - service: mqtt.publish
         data:
           topic: 'sensors/rf/receiver'
