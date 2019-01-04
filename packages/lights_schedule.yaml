@@ -34,7 +34,7 @@ input_boolean:
     initial: On
   disabilita_sensore_letto:
     name: Sensore letto
-    initial:off
+    initial: off
 #------------------------------------------------------------------------------
 input_number:
 #------------------------------------------------------------------------------
