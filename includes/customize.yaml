@@ -327,9 +327,9 @@
     binary_sensor.luce_bagno:
       friendly_name: "Luce Bagno"
       icon: mdi:lightbulb-outline
-    binary_sensor.nabaztag:
-      friendly_name: "Nabaztag/Tag"
-      icon: mdi:carrot
+#    binary_sensor.nabaztag:
+#      friendly_name: "Nabaztag/Tag"
+#      icon: mdi:carrot
     binary_sensor.netgear_repeater:
       friendly_name: "Router Netgear"
       icon: mdi:router-wireless
@@ -450,22 +450,22 @@
       friendly_name: "Ocean"
       entity_picture: /local/oceano.jpg
 #*********************************NABAZTAG*************************************
-    script.nabaztag_surprise:
-      icon: mdi:emoticon-excited
-    script.nabaztag_stop:
-      icon: mdi:emoticon-neutral
-    script.nabaztag_info_off:
-      icon: mdi:information-outline
-    switch.nabaztag_taichi:
-      icon: mdi:yin-yang
-    switch.nabaztag_nose:
-      icon: mdi:circle-outline
-    switch.nabaztaglife:
-      icon: mdi:power
-    script.nabaztag_update:
-      icon: mdi:restore
-    script.nabaztag_reboot:
-      icon: mdi:refresh
+#    script.nabaztag_surprise:
+#      icon: mdi:emoticon-excited
+#    script.nabaztag_stop:
+#      icon: mdi:emoticon-neutral
+#    script.nabaztag_info_off:
+#      icon: mdi:information-outline
+#    switch.nabaztag_taichi:
+#      icon: mdi:yin-yang
+#    switch.nabaztag_nose:
+#      icon: mdi:circle-outline
+#    switch.nabaztaglife:
+#      icon: mdi:power
+#    script.nabaztag_update:
+#      icon: mdi:restore
+#    script.nabaztag_reboot:
+#      icon: mdi:refresh
 #*************************** TASTIERINO SKY ***********************************
     switch.sky_power:
       friendly_name: "Power"

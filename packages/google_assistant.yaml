@@ -285,12 +285,12 @@ google_assistant:
       aliases:
         - il volume
         - entity t 45
-    switch.nabaztaglife:
-      name: coniglio
-      expose: true
-      aliases:
-        - nabaztag
-        - entity t 46
+#    switch.nabaztaglife:
+#      name: coniglio
+#      expose: true
+#      aliases:
+#        - nabaztag
+#        - entity t 46
     switch.ventilatore_bagno:
       name: splitter 6
       expose: true

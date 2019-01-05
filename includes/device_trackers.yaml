@@ -26,7 +26,7 @@
       maxpersonale: !secret maxpersonale
       maxlavoro: !secret maxlavoro
 #******************************************************************************
-      nabaztag: !secret nabaztag
+#      nabaztag: !secret nabaztag
       netgear_repeater: !secret netgear_repeater
 #******************************************************************************
       ring: !secret ring

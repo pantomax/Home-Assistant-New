@@ -4,11 +4,11 @@
 #
 ###############################################################################
 #------------------------------------------------------------------------------
-input_boolean:
+#input_boolean:
 #------------------------------------------------------------------------------
-  nabaztag_esclama:
-    name: Nabaztag Esclama in Chromecast
-    initial: off
+#  nabaztag_esclama:
+#    name: Nabaztag Esclama in Chromecast
+#    initial: off
 
 #------------------------------------------------------------------------------
 automation:
@@ -39,23 +39,23 @@ automation:
       - service: scene.turn_on
         entity_id: scene.film
 #******************************************************************************
-  - alias: "Nabaztag esclama con Chromecast in partenza"
-    trigger:
-      - platform: state
-        entity_id: media_player.chromecastvideosalotto
-        from: 'idle'
-        to: 'playing'
-        for:
-          hours: 0
-          minutes: 0
-          seconds: 5
-    condition:
-      - condition: state
-        entity_id: input_boolean.nabaztag_esclama
-        state: 'off'
-    action:
-      - service: homeassistant.turn_on
-        entity_id: input_boolean.nabaztag_esclama
+#  - alias: "Nabaztag esclama con Chromecast in partenza"
+#    trigger:
+#      - platform: state
+#        entity_id: media_player.chromecastvideosalotto
+#        from: 'idle'
+#        to: 'playing'
+#        for:
+#          hours: 0
+#          minutes: 0
+#          seconds: 5
+#    condition:
+#      - condition: state
+#        entity_id: input_boolean.nabaztag_esclama
+#        state: 'off'
+#    action:
+#      - service: homeassistant.turn_on
+#        entity_id: input_boolean.nabaztag_esclama
 #******************************************************************************
   - alias: "Chromecast in stop"
     trigger:

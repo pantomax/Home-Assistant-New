@@ -41,7 +41,7 @@
         - switch.accendi_termostato_dashboard_salotto
         - switch.accendi_termostato_dashboard_camera
         - switch.tv_volume
-        - switch.nabaztaglife
+#        - switch.nabaztaglife
         - switch.ventilatore_bagno
         - script.apricancello
         - sensor.dht_humidity
@@ -271,11 +271,11 @@
         aliases:
           - il volume
           - entity t 45
-      switch.nabaztaglife:
-        name: coniglio
-        aliases:
-          - nabaztag
-          - entity t 46
+#      switch.nabaztaglife:
+#        name: coniglio
+#        aliases:
+#          - nabaztag
+#          - entity t 46
       switch.ventilatore_bagno:
         name: Ventola1
 #******************************************************************************
@@ -461,9 +461,9 @@
       switch.tv_volume:
         name: volume
         description: volume della tv
-      switch.nabaztaglife:
-        name: coniglio
-        description: nabaztag
+#      switch.nabaztaglife:
+#        name: coniglio
+#        description: nabaztag
       switch.ventilatore_bagno:
         name: Ventilatore bagno
         description: ventilatore in bagno

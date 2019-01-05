@@ -334,7 +334,7 @@
       - weblink.router_da_fuori
       - weblink.home_assistant
       - weblink.ha_community
-      - weblink.nabaztag
+#      - weblink.nabaztag
   rf_receivers:
     name: RF Receivers
     entities:
@@ -598,7 +598,7 @@
       - group.broadlink_network
       - group.condizionatori
       - group.dev_pi
-      - group.nabaztag
+#      - group.nabaztag
       - group.ring_network
       - group.wifi_shield_outlet
       - group.pc_windows
