@@ -48,24 +48,24 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          white_value: 0
+          color_name: red
+          brightness: 255
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          color_name: red
-          brightness: 255
+          white_value: 0
       - service: light.turn_off
         data:
           entity_id: light.led_strip
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          white_value: 0
+          color_name: red
+          brightness: 255
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          color_name: red
-          brightness: 255
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
