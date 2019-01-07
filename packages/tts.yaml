@@ -32,7 +32,7 @@ sensor:
 - platform: command_line
   name: "last tts"
   command: "ls /config/www/vl/voice/ -1t | head -1"
-  scan_interval: 5
+  scan_interval: 60
 - platform: folder
   folder: /config/www/vl/voice/
 #------------------------------------------------------------------------------
