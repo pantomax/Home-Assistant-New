@@ -222,7 +222,7 @@ automation:
       service: light.turn_on
       entity_id: light.giardino
 #******************************************************************************
-  - alias: Turn off kitchen light 10 minutes after last movement
+  - alias: Turn off garden light 1 minutes after last movement
     trigger:
       platform: state
       entity_id: binary_sensor.ring_front_door_motion
