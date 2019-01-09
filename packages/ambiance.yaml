@@ -127,6 +127,10 @@ script:
         data:
           entity_id: light.led_strip
           effect: green_fade
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
       - service: media_player.volume_mute
         data:
           entity_id: media_player.chromecastvideosalotto
@@ -333,6 +337,10 @@ script:
         data:
           entity_id: light.led_strip
           effect: blue_strobe
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
       - service: light.turn_off
         data:
           entity_id: light.led_strip
@@ -349,6 +357,10 @@ script:
         data:
           entity_id: light.led_strip
           effect: blue_fade
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
 #      - service: hassio.addon_stdin
 #        data:
 #          addon: de3cd379_audio_player
@@ -373,6 +385,10 @@ script:
           entity_id: light.led_strip
           color_name: blue
           brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
 #******************************************************************************
   black_alert_1:
     alias: black_alert_1
