@@ -22,7 +22,8 @@
         device_class: motion
         value_template: >-
           {{ is_state('binary_sensor.movimento_cucina_s1c', 'on')
-             or is_state('binary_sensor.motion_sensor_rf_4', 'on') }}
+             or is_state('binary_sensor.motion_sensor_rf_4', 'on') 
+             or is_state('binary_sensor.door_sensor_rf_1_new', 'on')}}
 #********************************** CORRIDOIO *********************************
       movimento_corridoio:
         device_class: motion
@@ -30,7 +31,8 @@
           seconds: 30
         value_template: >-
           {{ is_state('binary_sensor.motion_sensor_rf_2', 'on')
-             or is_state('binary_sensor.motion_sensor_rf_5', 'on') }}
+             or is_state('binary_sensor.motion_sensor_rf_5', 'on') 
+             or is_state('binary_sensor.door_sensor_rf_2_new', 'on') }}
 #********************************** SALOTTO ***********************************
       movimento_salotto:
         device_class: motion

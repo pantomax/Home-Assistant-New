@@ -78,16 +78,7 @@ binary_sensor:
         device_class: motion
         value_template: >-
           {{ is_state('sensor.rf_receiver', '12916060') }}
-#***************************** Bagno Uscita ***********************************
-  - platform: template
-    sensors:
-      door_sensor_rf_1:
-        friendly_name: "Door Sensor RF 1"
-        device_class: motion
-        delay_off:
-          seconds: 60
-        value_template: >-
-          {{ is_state('sensor.rf_receiver', '13865801') }}
+
 #************************* Telecomando Luci Posizione D************************
   - platform: template
     sensors:
@@ -164,29 +155,30 @@ binary_sensor:
         friendly_name: "Telecomando RF 4IV On"
         value_template: >-
           {{ is_state('sensor.rf_receiver', '2477701632') }}
-
+#***************************** Porta Ingresso Cucina ***********************************
   - platform: template
     sensors:
-      motion_sensor_rf_1_new:
-        friendly_name: "Motion Sensor RF 1 new"
+      door_sensor_rf_1_new:
+        friendly_name: "Door Sensor RF 1 new"
         device_class: motion
         delay_off:
-          seconds: 300
+          seconds: 60
         value_template: >-
           {{ is_state('sensor.rf_receiver', '13865801') }}
+#***************************** Armadio Corridoio ***********************************
   - platform: template
     sensors:
-      motion_sensor_rf_2_new:
-        friendly_name: "Motion Sensor RF 2 new"
+      door_sensor_rf_2_new:
+        friendly_name: "Door Sensor RF 2 new"
         device_class: motion
         delay_off:
-          seconds: 300
+          seconds: 120
         value_template: >-
           {{ is_state('sensor.rf_receiver', '7313033') }}
   - platform: template
     sensors:
-      motion_sensor_rf_3_new:
-        friendly_name: "Motion Sensor RF 3 new"
+      door_sensor_rf_3_new:
+        friendly_name: "Door Sensor RF 3 new"
         device_class: motion
         delay_off:
           seconds: 300
@@ -194,8 +186,8 @@ binary_sensor:
           {{ is_state('sensor.rf_receiver', '1577129') }}
   - platform: template
     sensors:
-      motion_sensor_rf_4_new:
-        friendly_name: "Motion Sensor RF 4 new"
+      door_sensor_rf_4_new:
+        friendly_name: "Door Sensor RF 4 new"
         device_class: motion
         delay_off:
           seconds: 300
@@ -203,8 +195,8 @@ binary_sensor:
           {{ is_state('sensor.rf_receiver', '2748585') }}
   - platform: template
     sensors:
-      motion_sensor_rf_5_new:
-        friendly_name: "Motion Sensor RF 5 new"
+      door_sensor_rf_5_new:
+        friendly_name: "Door Sensor RF 5 new"
         device_class: motion
         delay_off:
           seconds: 300
@@ -212,8 +204,8 @@ binary_sensor:
           {{ is_state('sensor.rf_receiver', '11493257') }}
   - platform: template
     sensors:
-      motion_sensor_rf_6_new:
-        friendly_name: "Motion Sensor RF 6 new"
+      door_sensor_rf_6_new:
+        friendly_name: "Door Sensor RF 6 new"
         device_class: motion
         delay_off:
           seconds: 300
