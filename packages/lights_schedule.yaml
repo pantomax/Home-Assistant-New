@@ -440,6 +440,41 @@ automation:
       - service: light.turn_off
         entity_id: group.kitchen
 #******************************************************************************
+  - alias: "Accendi Luce Cucina all'apertura della porta"
+    trigger:
+      - platform: state
+        entity_id: sensors.door_sensor_rf_1
+        to: 'on'
+    condition:
+      - condition: state
+        entity_id: binary_sensor.permetti_accensione_luci
+        state: 'on'
+    action:
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.googlehomecucina
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
+      - service: light.turn_on
+        entity_id: group.kitchen
+#******************************************************************************
+  - alias: "Spegni Luce Cucina dopo 30 secondi dall'apertura della porta"
+    trigger:
+      - platform: state
+        entity_id: sensors.door_sensor_rf_1
+        to: 'off'
+    condition:
+    - condition: and
+      conditions:
+      - condition: state
+        entity_id: binary_sensor.movimento_cucina
+        state: 'off'
+      - condition: template
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
+    action:
+      - service: light.turn_off
+        entity_id: group.kitchen
+#******************************************************************************
   - alias: "Controlla ogni 9 minuti e spegne luci cucina"
     trigger:
       platform: time

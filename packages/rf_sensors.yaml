@@ -78,6 +78,16 @@ binary_sensor:
         device_class: motion
         value_template: >-
           {{ is_state('sensor.rf_receiver', '12916060') }}
+#***************************** Bagno Uscita ***********************************
+  - platform: template
+    sensors:
+      door_sensor_rf_1:
+        friendly_name: "Door Sensor RF 1"
+        device_class: motion
+        delay_off:
+          seconds: 30
+        value_template: >-
+          {{ is_state('sensor.rf_receiver', '13865801') }}
 #************************* Telecomando Luci Posizione D************************
   - platform: template
     sensors:
