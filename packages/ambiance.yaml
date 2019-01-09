@@ -107,18 +107,22 @@ script:
           entity_id: light.led_strip
           color_name: green
           brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
       - service: light.turn_off
         data:
           entity_id: light.led_strip
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          white_value: 0
+          color_name: green
+          brightness: 255
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          color_name: green
-          brightness: 255
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -160,18 +164,22 @@ script:
           entity_id: light.led_strip
           color_name: cyan
           brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
       - service: light.turn_off
         data:
           entity_id: light.led_strip
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          white_value: 0
+          color_name: cyan
+          brightness: 255
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          color_name: cyan
-          brightness: 255
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -213,6 +221,10 @@ script:
           entity_id: light.led_strip
           color_name: purple
           brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
       - service: light.turn_off
         data:
           entity_id: light.led_strip
@@ -225,6 +237,10 @@ script:
           entity_id: light.led_strip
           color_name: purple
           brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -266,18 +282,22 @@ script:
           entity_id: light.led_strip
           color_name: cyan
           brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
       - service: light.turn_off
         data:
           entity_id: light.led_strip
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          white_value: 0
+          color_name: cyan
+          brightness: 255
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          color_name: cyan
-          brightness: 255
+          white_value: 0
       - service: light.turn_on
         data:
           entity_id: light.led_strip
@@ -319,11 +339,11 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          white_value: 0
+          effect: blue_strobe
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          effect: blue_strobe
+          white_value: 0
       - delay: 00:00:02
       - service: light.turn_on
         data:
@@ -369,11 +389,11 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          white_value: 0
+          effect: blue_strobe
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          effect: blue_strobe
+          white_value: 0
       - delay: 00:00:02
       - service: light.turn_on
         data:
@@ -399,6 +419,10 @@ script:
           entity_id: light.led_strip
           color_name: blue
           brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
       - service: media_player.play_media
         data:
           entity_id: media_player.chromecastaudiosalotto
@@ -452,16 +476,20 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          white_value: 0
+          effect: red_strobe
       - service: light.turn_on
         data:
           entity_id: light.led_strip
-          effect: red_strobe
+          white_value: 0
       - delay: 00:00:01
       - service: light.turn_on
         data:
           entity_id: light.led_strip
           effect: red_fade
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
 #      - service: hassio.addon_stdin
 #        data:
 #          addon: de3cd379_audio_player
@@ -486,4 +514,8 @@ script:
           entity_id: light.led_strip
           color_name: red
           brightness: 255
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip
+          white_value: 0
 #******************************************************************************
