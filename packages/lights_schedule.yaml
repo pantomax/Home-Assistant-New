@@ -458,7 +458,7 @@ automation:
       - service: light.turn_on
         entity_id: group.kitchen
 #******************************************************************************
-  - alias: "Spegni Luce Cucina dopo 30 secondi dall'apertura della porta"
+  - alias: "Spegni Luce Cucina dopo 60 secondi dall'apertura della porta"
     trigger:
       - platform: state
         entity_id: binary_sensor.door_sensor_rf_1
