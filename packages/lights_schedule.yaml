@@ -443,7 +443,7 @@ automation:
   - alias: "Accendi Luce Cucina all'apertura della porta"
     trigger:
       - platform: state
-        entity_id: sensors.door_sensor_rf_1
+        entity_id: binary_sensor.door_sensor_rf_1
         to: 'on'
     condition:
       - condition: state
@@ -461,7 +461,7 @@ automation:
   - alias: "Spegni Luce Cucina dopo 30 secondi dall'apertura della porta"
     trigger:
       - platform: state
-        entity_id: sensors.door_sensor_rf_1
+        entity_id: binary_sensor.door_sensor_rf_1
         to: 'off'
     condition:
     - condition: and
