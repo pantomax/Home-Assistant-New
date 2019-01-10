@@ -561,6 +561,7 @@
       - history_graph.temperatura_camera
       - group.bedroom
       - input_boolean.disabilita_sensore_letto
+      - input_boolean.sveglia_luminosa
   Tab_Tv:
     name: Tv
     view: yes

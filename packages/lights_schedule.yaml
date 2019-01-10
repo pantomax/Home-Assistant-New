@@ -35,6 +35,9 @@ input_boolean:
   disabilita_sensore_letto:
     name: Sensore letto
     initial: on
+  sveglia_luminosa:
+    name: Sveglia luminosa
+    initial: on
 #------------------------------------------------------------------------------
 input_number:
 #------------------------------------------------------------------------------
@@ -628,15 +631,18 @@ automation:
       - service: light.turn_off
         entity_id: light.led_strip_camera
 #******************************************************************************
-  - alias: "Accende le luci sui comodini tutti i giorni alle 7.10 del lun al ven"
+  - alias: "Accende le luci sui comodini tutti i giorni alle 7.20 del lun al ven"
     trigger:
       platform: time
-      at: '07:15:00'
+      at: '07:20:00'
     condition:
     - condition: and
       conditions:
       - condition: template
         value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
+      - condition: state
+        entity_id: binary_sensor.sveglia_luminosa
+        state: 'on'
       - condition: state
         entity_id: binary_sensor.permetti_accensione_luci
         state: 'on'
