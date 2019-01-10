@@ -170,8 +170,8 @@ scalda_bagno:
     entity: switch.accendi_termostato_dashboard_bagno
 normal:
     widget_type: mode
-    icon_on: fa-clock-o
-    icon_off: fa-clock-o
+    icon_on: mdi-clock
+    icon_off: mdi-clock
     title: Normal
     entity: input_select.house_mode
     mode: Normal
@@ -179,16 +179,16 @@ normal:
 dog:
     widget_type: mode
     title: Dog
-    icon_on: fa-firefox
-    icon_off: fa-firefox
+    icon_on: mdi-dog
+    icon_off: mdi-dog
     entity: input_select.house_mode
     mode: Dog Mode
     script: script.dog_mode
 night:
     widget_type: mode
     title: Night
-    icon_on: fa-star-o
-    icon_off: fa-star-o
+    icon_on: mdi-weather-night
+    icon_off: mdi-weather-night
     entity: input_select.house_mode
     mode: Night Mode
     script: script.night_mode
@@ -203,8 +203,8 @@ weekend:
 athome:
     widget_type: mode
     title: At Home
-    icon_on: fa-home
-    icon_off: fa-home
+    icon_on: mdi-home
+    icon_off: mdi-home
     entity: input_select.house_mode
     mode: At home
     script: script.athome_mode
