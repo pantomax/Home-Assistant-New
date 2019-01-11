@@ -871,7 +871,7 @@ automation:
       - service: light.turn_on
         data_template:
           entity_id: light.led_strip
-          brightness: "{{ states('input_number.brightness_white') | int }}"
+          white_value: "{{ states('input_number.brightness_white') | int }}"
 
   - alias: "led brightness white camera"
     trigger:
@@ -881,7 +881,7 @@ automation:
       - service: light.turn_on
         data_template:
           entity_id: light.led_strip_camera
-          brightness: "{{ states('input_number.brightness_white_camera') | int }}"
+          white_value: "{{ states('input_number.brightness_white_camera') | int }}"
 
   - alias: "led brightness white bagno"
     trigger:
@@ -891,7 +891,7 @@ automation:
       - service: light.turn_on
         data_template:
           entity_id: light.led_strip_bagno
-          brightness: "{{ states('input_number.brightness_white_bagno') | int }}"
+          white_value: "{{ states('input_number.brightness_white_bagno') | int }}"
 #******************************************************************************
   - alias: "led brightness profile"
     trigger:
