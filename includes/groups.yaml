@@ -61,6 +61,8 @@
     entities:
       - light.corridoio_bagno
       - light.corridoio_porta
+      - light.bagno
+      - light.led_strip_bagno
   luci_casa:
     name: Luci Casa
     entities:

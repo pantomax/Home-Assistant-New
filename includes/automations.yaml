@@ -123,8 +123,8 @@
   - alias: 'Attiva input_boolean.guarda_tv se chromecast salotto va on line'
     trigger:
       - platform: state
-        entity_id: sensor.livingroomchromecast
-        to: 'Online'
+        entity_id: device_tracker.chromecast_salotto
+        to: 'home'
     action:
       - service: homeassistant.turn_on
         entity_id: input_boolean.guarda_tv
@@ -132,8 +132,8 @@
   - alias: 'Disattiva input_boolean.guarda_tv se chromecast salotto va on line'
     trigger:
       - platform: state
-        entity_id: sensor.livingroomchromecast
-        to: 'Offline'
+        entity_id: device_tracker.chromecast_salotto
+        to: 'not_home'
         for: 
           seconds: 20
     action:
