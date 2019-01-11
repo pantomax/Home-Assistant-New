@@ -789,6 +789,7 @@ automation:
           entity_id: light.led_strip
           rgb_color: ["{{ (states('input_number.r_color')|int) }}", "{{ (states('input_number.g_color')|int) }}", "{{ (states('input_number.b_color')|int) }}"]
           brightness: "{{ states('input_number.brightness_rgb')|int }}"
+          white_value: "{{ states('input_number.brightness_white') | int }}"
 
   - alias: "led change color rgb camera"
     trigger:
@@ -806,6 +807,7 @@ automation:
           entity_id: light.led_strip_camera
           rgb_color: ["{{ (states('input_number.r_color_camera')|int) }}", "{{ (states('input_number.g_color_camera')|int) }}", "{{ (states('input_number.b_color_camera')|int) }}"]
           brightness: "{{ states('input_number.brightness_rgb_camera')|int }}"
+          white_value: "{{ states('input_number.brightness_white_camera') | int }}"
 
   - alias: "led change color rgb bagno"
     trigger:
@@ -823,6 +825,7 @@ automation:
           entity_id: light.led_strip_bagno
           rgb_color: ["{{ (states('input_number.r_color_bagno')|int) }}", "{{ (states('input_number.g_color_bagno')|int) }}", "{{ (states('input_number.b_color_bagno')|int) }}"]
           brightness: "{{ states('input_number.brightness_rgb_bagno')|int }}"
+          white_value: "{{ states('input_number.brightness_white_bagno') | int }}"
 #******************************************************************************
   - alias: "led change color list"
     trigger:
@@ -836,6 +839,7 @@ automation:
           entity_id: light.led_strip
           color_name: "{{ states('input_select.color_name') }}"
           brightness_pct: "{{ states('input_number.brightness_list')|int }}"
+          white_value: "{{ states('input_number.brightness_white') | int }}"
 
   - alias: "led change color list camera"
     trigger:
@@ -849,6 +853,7 @@ automation:
           entity_id: light.led_strip_camera
           color_name: "{{ states('input_select.color_name_camera') }}"
           brightness_pct: "{{ states('input_number.brightness_list_camera')|int }}"
+          white_value: "{{ states('input_number.brightness_white_camera') | int }}"
 
   - alias: "led change color list bagno"
     trigger:
@@ -862,6 +867,7 @@ automation:
           entity_id: light.led_strip_bagno
           color_name: "{{ states('input_select.color_name_bagno') }}"
           brightness_pct: "{{ states('input_number.brightness_list_bagno')|int }}"
+          white_value: "{{ states('input_number.brightness_white_bagno') | int }}"
 #******************************************************************************
   - alias: "led brightness white"
     trigger:
