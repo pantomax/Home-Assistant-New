@@ -92,6 +92,7 @@
       script.luci_sala_accese: on
       light.led_strip:
         state: on
+        brightness: 0
         white_value: 255
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       switch.insettivoro: off
