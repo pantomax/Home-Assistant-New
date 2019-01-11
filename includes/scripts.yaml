@@ -3,27 +3,6 @@
 #                                 SCRIPTS
 #
 ###############################################################################
-  spegni_bagno_e_corridoio_con_dash_button:
-    alias: Spegni bagno e corridoio con dash button
-    sequence:
-      - service: light.turn_off
-        data:
-          entity_id:  light.corridoio_bagno
-      - service: light.turn_off
-        data:
-          entity_id: light.corridoio_porta
-      - service: light.turn_off
-        data:
-          entity_id: light.bagno
-      - service: light.turn_off
-        data:
-          entity_id: light.led_strip_bagno
-      - service: homeassistant.turn_off
-        data:
-          entity_id: binary_sensor.movimento_corridoio
-      - service: homeassistant.turn_off
-        data:
-          entity_id: binary_sensor.movimento_bagno_in_telemetria
 #******************************************************************************
   pause_and_play_chromecast:
     alias: Pause/Play Chromecast with Dashbutton
