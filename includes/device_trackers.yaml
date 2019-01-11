@@ -17,7 +17,7 @@
       zidoo: !secret zidoo
       google: !secret google
 #******************************************************************************
-      chromecast_salotto: !secret chromecast_salotto
+      chromecast_salotto: !secret chromecast_salotto_nuovo
       chromecast_cucina: !secret chromecast_cucina
       chromecast_bagno: !secret chromecast_bagno
 #******************************************************************************
