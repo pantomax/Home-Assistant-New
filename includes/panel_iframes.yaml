@@ -11,6 +11,10 @@
 #    title: Configurator
 #    icon: mdi:wrench
 #    url: !secret panel_iframe_configurator_url
+  logviewer:
+    title: Log Viewer
+    icon: mdi:wrench
+    url: !secret panel_iframe_log_viewer_url
   terminal:
     title: Terminal
     icon: mdi:console-line
