@@ -24,38 +24,41 @@ automation:
     action:
       - service: hassio.addon_start
         data:
-          addon: "core_git_pull"
-      - service: hassio.addon_start
-        data:
-          addon: "core_google_assistant"
-      - service: hassio.addon_start
-        data:
-          addon: "ab75e4fb_s1c"
-      - service: hassio.addon_start
-        data:
-          addon: "62cc289b_dasshio"
-      - service: hassio.addon_start
-        data:
-          addon: "core_ssh"
-      - service: hassio.addon_start
-        data:
-          addon: "ab75e4fb_rfreceiver"
-      - service: hassio.addon_start
-        data:
-          addon: "f456c084_appdaemon"
+          addon: "a0d7b954_appdaemon3"
       - service: hassio.addon_start
         data:
           addon: "de3cd379_audio_player"
       - service: hassio.addon_start
         data:
-          addon: "53caca22_caddy_proxy"
+          addon: "core_check_config"
       - service: hassio.addon_start
         data:
-          addon: "core_dnsmasq"
+          addon: "03d23610_dasshio"
+      - service: hassio.addon_start
+        data:
+          addon: "core_duckdns"
+      - service: hassio.addon_start
+        data:
+          addon: "core_git_pull"
+      - service: hassio.addon_start
+        data:
+          addon: "a0d7b954_ide"
+      - service: hassio.addon_start
+        data:
+          addon: "a0d7b954_logviewer"
       - service: hassio.addon_start
         data:
           addon: "core_mosquitto"
       - service: hassio.addon_start
         data:
-          addon: "5826d7ea_terminal"
+          addon: "a0d7b954_pi-hole"
+      - service: hassio.addon_start
+        data:
+          addon: "de3cd379_rfreceiver"
+      - service: hassio.addon_start
+        data:
+          addon: "a0d7b954_ssh"
+      - service: hassio.addon_start
+        data:
+          addon: "core_samba"
 #******************************************************************************
