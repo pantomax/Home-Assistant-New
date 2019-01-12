@@ -282,9 +282,9 @@
   pihole:
     name: Pi-Hole
     entities:
-      - ads_blocked_today
-      - dns_queries_today
-      - unique_clients
+      - sensor.ads_blocked_today
+      - sensor.dns_queries_today
+      - sensor.unique_clients
 #  nabaztag:
 #    name: Nabaztag
 #    entities:
