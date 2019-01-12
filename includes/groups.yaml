@@ -279,6 +279,12 @@
       - binary_sensor.led_strip
       - binary_sensor.multipresa_wifi
       - input_boolean.visualizza_gruppo_dashbutton
+  pihole:
+    name: Pi-Hole
+    entities:
+      - ads_blocked_today
+      - dns_queries_today
+      - unique_clients
 #  nabaztag:
 #    name: Nabaztag
 #    entities:
@@ -602,6 +608,7 @@
       - group.condizionatori
       - group.dev_pi
 #      - group.nabaztag
+      - group.pihole
       - group.ring_network
       - group.wifi_shield_outlet
       - group.pc_windows

@@ -3,6 +3,13 @@
 #                                 SENSORS
 #
 ###############################################################################
+  - platform: pi_hole
+    host: localhost:4865
+    monitored_conditions:
+      - ads_blocked_today
+      - dns_queries_today
+      - unique_clients
+#******************************************************************************
   - platform: speedtest
     minute: 30
     hour:
