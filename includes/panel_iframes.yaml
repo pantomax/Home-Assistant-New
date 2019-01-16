@@ -27,4 +27,8 @@
     title: Pi-hole
     icon: mdi:block-helper
     url: !secret panel_iframe_pi_hole_url
+  influxdb:
+    title: InfluxDB
+    icon: mdi:graphql
+    url: !secret panel_iframe_influxdb_url
 #******************************************************************************
