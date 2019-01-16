@@ -1042,3 +1042,19 @@ automation:
       - service: scene.turn_on
         entity_id: scene.luci_sala_accese
 #******************************************************************************
+  - alias: 'Accende luci cucina con pulsante a muro'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.wallswitch_1_button_1
+        to: 'on'
+    action:
+      - service: light.toggle
+        entity_id: luci_cucina_tutte
+  - alias: 'Accende luci salotto con pulsante a muro'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.wallswitch_1_button_2
+        to: 'on'
+    action:
+      - service: light.toggle
+        entity_id: luci_salotto_tutte
