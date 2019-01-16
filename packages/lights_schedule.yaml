@@ -1053,6 +1053,11 @@ automation:
           topic: 'sensors/rf/receiver'
           payload: '1111111'
           retain: 'true'
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.googlehomecucina
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
       - service: light.toggle
         entity_id: light.luci_cucina_tutte
   - alias: 'Accende luci salotto con pulsante a muro'
@@ -1066,5 +1071,10 @@ automation:
           topic: 'sensors/rf/receiver'
           payload: '1111111'
           retain: 'true'
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.googlehomecucina
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
       - service: light.toggle
         entity_id: light.luci_salotto_tutte
