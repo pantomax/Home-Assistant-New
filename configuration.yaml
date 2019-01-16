@@ -21,21 +21,13 @@ logbook:
   exclude:
     entities:
       - sensor.speedtest
-      - sensor.date_countdown
       - sensor.wunderground
       - sensor.darksky
       - sensor.systemmonitor
     domains:
-      - sun
-      - ffmpeg
-      - camera
-      - android_ip_webcam
       - device_tracker
       - intent_script
       - zone
-      - weblink
-      - history_graph
-      - panel_iframe
       - script
       - input_boolean
       - input_number
@@ -47,8 +39,8 @@ logger:
 #    homeassistant.components.http: debug
 #    homeassistant.components.dialogflow: debug
 recorder:
-  purge_interval: 2
-  purge_keep_days: 3
+  purge_interval: 7
+  purge_keep_days: 7
 http:
    server_port: 8123
    base_url: !secret base_url_site

@@ -28,6 +28,73 @@
         - service: light.turn_off
           data:
             entity_id: light.light_kitchen_2
+#*************************** TUTTE LUCI SALOTTO ****************************
+  - platform: template
+    switches:
+      luci_salotto_tutte:
+        value_template: >-
+          {% if (is_state('light.tavolino','on')) or
+          (is_state('light.libreria','on')) or
+          (is_state('light.soffitto','on')) or
+          (is_state('light.mobile_tv','on')) or
+          (is_state('light.light_desk','on')) or
+          (is_state('light.retro_tv','on')) or
+          (is_state('light.insettivoro','on')) or
+          (is_state('light.led_strip','on')) %}
+          on
+          {% else %}
+          off
+          {% endif %}
+        turn_on:
+        - service: light.turn_on
+          data:
+            entity_id: light.tavolino
+        - service: light.turn_on
+          data:
+            entity_id: light.libreria
+        - service: light.turn_on
+          data:
+            entity_id: light.soffitto
+        - service: light.turn_on
+          data:
+            entity_id: light.mobile_tv
+        - service: light.turn_on
+          data:
+            entity_id: light.light_desk
+        - service: light.turn_on
+          data:
+            entity_id: light.retro_tv
+        - service: light.turn_on
+          data:
+            entity_id: light.insettivoro
+        - service: light.turn_on
+          data:
+            entity_id: light.led_strip
+        turn_off:
+        - service: light.turn_off
+          data:
+            entity_id: light.tavolino
+        - service: light.turn_off
+          data:
+            entity_id: light.libreria
+        - service: light.turn_off
+          data:
+            entity_id: light.soffitto
+        - service: light.turn_off
+          data:
+            entity_id: light.mobile_tv
+        - service: light.turn_off
+          data:
+            entity_id: light.light_desk
+        - service: light.turn_off
+          data:
+            entity_id: light.retro_tv
+        - service: light.turn_off
+          data:
+            entity_id: light.insettivoro
+        - service: light.turn_off
+          data:
+            entity_id: light.led_strip
 #*************************** TUTTE LUCI BAGNO *********************************
   - platform: template
     switches:

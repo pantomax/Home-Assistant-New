@@ -31,6 +31,16 @@
           entity_id: switch.luci_cucina_tutte
   - platform: template
     lights:
+      luci_salotto_tutte:
+        value_template: "{{ is_state('switch.luci_salotto_tutte', 'on') }}"
+        turn_on:
+          service: switch.turn_on
+          entity_id: switch.luci_salotto_tutte
+        turn_off:
+          service: switch.turn_off
+          entity_id: switch.luci_salotto_tutte
+  - platform: template
+    lights:
       luci_bagno_tutte:
         value_template: "{{ is_state('switch.luci_bagno_tutte', 'on') }}"
         turn_on:
