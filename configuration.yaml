@@ -65,51 +65,14 @@ mqtt:
   port: 1883
   keepalive: 30
 influxdb:
-  host: 192.168.1.101
+  host: a0d7b954-influxdb
   port: 8086
   database: !secret influxdb_database
   username: !secret influxdb_username
   password: !secret influxdb_password
   max_retries: 3
   default_measurement: state
-  include:
-    entities:
-      - binary_sensor.porta_retro
-      - binary_sensor.porta_corridoio
-      - binary_sensor.finestra_salotto
-#******************************************************************************
-      - binary_sensor.movimento_cucina
-      - binary_sensor.movimento_corridoio
-      - binary_sensor.movimento_salotto
-      - binary_sensor.letto
-      - binary_sensor.movimento_bagno_in_telemetria
-      - binary_sensor.cancello
-#******************************************************************************
-      - light.luci_cucina_tutte
-      - light.luci_salotto_tutte
-      - light.luci_corridoio_tutte
-      - light.luci_bagno_tutte
-      - light.luci_camera_tutte
-      - light.luci_giardino_tutte
-#******************************************************************************
-      - binary_sensor.permetti_accensione_luci
-      - sensor.sunlight_pct
-      - sun.sun
-#******************************************************************************
-      - sensor.sensore_humidity
-      - sensor.sensore_temperature
-      - sensor.temperatura_salotto_temperature
-      - sensor.temperatura_camera_temperature
-#******************************************************************************
-      - sensor.speedtest_ping
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
-#******************************************************************************
-      - input_boolean.guarda_tv
-#******************************************************************************
-      - binary_sensor.ring
-      - binary_sensor.ring_chime_pro
-      - binary_sensor.tp_link
+
 
 ############
 # Includes
