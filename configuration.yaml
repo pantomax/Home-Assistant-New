@@ -64,14 +64,7 @@ mqtt:
   password: !secret mqtt_password
   port: 1883
   keepalive: 30
-influxdb:
-  host: a0d7b954-influxdb
-  port: 8086
-  database: !secret influxdb_database
-  username: !secret influxdb_username
-  password: !secret influxdb_password
-  max_retries: 3
-  default_measurement: state
+
 
 
 ############
@@ -88,6 +81,7 @@ group: !include includes/groups.yaml
 history: !include includes/history.yaml
 history_graph: !include includes/history_graph.yaml
 ifttt: !include includes/ifttt.yaml
+influxdb: !include includes/influxdb.yaml
 input_boolean: !include includes/input_boolean.yaml
 input_number: !include includes/input_number.yaml
 input_select: !include includes/input_select.yaml
