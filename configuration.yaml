@@ -65,7 +65,7 @@ mqtt:
   port: 1883
   keepalive: 30
 influxdb:
-  host: a0d7b954-influxdb
+  host: a0d7b954_influxdb
   port: 8086
   database: homeassistant
   username: !secret influxdb_username

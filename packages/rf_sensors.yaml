@@ -215,12 +215,12 @@ binary_sensor:
   - platform: template
     sensors:
       wallswitch_1_button_1:
-        friendly_name: "wallswitch_1_button_1"
+        friendly_name: "Wallswitch 1 Button 1"
         value_template: >-
           {{ is_state('sensor.rf_receiver', '1441810') }}
   - platform: template
     sensors:
       wallswitch_1_button_2:
-        friendly_name: "wallswitch_1_button_2"
+        friendly_name: "Wallswitch 1 Button 2"
         value_template: >-
           {{ is_state('sensor.rf_receiver', '1441812') }}
