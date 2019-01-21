@@ -1063,7 +1063,7 @@ automation:
       - service: light.toggle
         entity_id: light.luci_salotto_tutte
 
-  - alias: 'Accende luci prova1 con pulsante a muro'
+  - alias: 'Accende luci bagno con pulsante a muro'
     trigger:
       - platform: state
         entity_id: binary_sensor.wallswitch_2_button_1
@@ -1081,7 +1081,7 @@ automation:
           media_content_id: !secret computerbeep_12
       - service: light.toggle
         entity_id: light.luci_bagno_tutte
-  - alias: 'Accende luci prova1 con pulsante a muro'
+  - alias: 'Accende luci corridoio con pulsante a muro'
     trigger:
       - platform: state
         entity_id: binary_sensor.wallswitch_2_button_2
@@ -1099,3 +1099,22 @@ automation:
           media_content_id: !secret computerbeep_12
       - service: light.toggle
         entity_id: light.luci_corridoio_tutte
+
+  - alias: 'Spegne tutte le luci'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.wallswitch_3_button_1
+        to: 'on'
+    action:
+      - service: mqtt.publish
+        data:
+          topic: 'sensors/rf/receiver'
+          payload: '1111111'
+          retain: 'true'
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.googlehomesalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
+      - service: scene.turn_on
+        entity_id: scene.buona_notte

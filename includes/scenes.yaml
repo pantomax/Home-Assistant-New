@@ -10,26 +10,16 @@
   - name: Buona notte
     entities:
 #^^^^^^^^^SALOTTO^^^^^^^^^^^^^^^^^^^^^^
-      light.tavolino: off
-      light.libreria: off
-      light.soffitto: off
-      light.mobile_tv: off
-      light.retro_tv: off
-      light.light_desk: off
-      light.led_strip:
-        state: off
-#^^^^^^^^^CORRIDOIO^^^^^^^^^^^^^^^^^^^^^^
-      light.corridoio_bagno: off
-      light.corridoio_porta: off
-#^^^^^^^^^CUCINA^^^^^^^^^^^^^^^^^^^^^^
-      light.light_kitchen: off
-      light.light_kitchen_2: off
+      light.luci_cucina_tutte: off
+      light.luci_corridoio_tutte: off
+      light.luci_bagno_tutte: off
+      light.luci_camera_tutte: off
+      light.luci_salotto_tutte: off
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       media_player.allmediaplayers:
         state: off
       input_boolean.guarda_tv: off
       switch.salotto_off: on
-      switch.insettivoro: off
       script.power_down: on
 #******************************************************************************
   - name: Buona notte PC
