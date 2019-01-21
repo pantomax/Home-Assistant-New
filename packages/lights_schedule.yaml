@@ -1080,7 +1080,7 @@ automation:
           media_content_type: "AUDIO"
           media_content_id: !secret computerbeep_12
       - service: light.toggle
-        entity_id: light.light_desk
+        entity_id: light.luci_bagno_tutte
   - alias: 'Accende luci prova1 con pulsante a muro'
     trigger:
       - platform: state
@@ -1098,4 +1098,4 @@ automation:
           media_content_type: "AUDIO"
           media_content_id: !secret computerbeep_12
       - service: light.toggle
-        entity_id: light.light_desk
+        entity_id: light.luci_corridoio_tutte
