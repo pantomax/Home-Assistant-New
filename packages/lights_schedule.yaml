@@ -1076,7 +1076,7 @@ automation:
           retain: 'true'
       - service: media_player.play_media
         data:
-          entity_id: media_player.googlehomesalotto
+          entity_id: media_player.googlehomebagno
           media_content_type: "AUDIO"
           media_content_id: !secret computerbeep_12
       - service: light.toggle
@@ -1094,7 +1094,7 @@ automation:
           retain: 'true'
       - service: media_player.play_media
         data:
-          entity_id: media_player.googlehomesalotto
+          entity_id: media_player.googlehomebagno
           media_content_type: "AUDIO"
           media_content_id: !secret computerbeep_12
       - service: light.toggle
