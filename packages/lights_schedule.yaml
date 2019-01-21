@@ -22,6 +22,8 @@ timer:
     duration: '00:10:00'
   spegnimento_bagno:
     duration: '00:00:08'
+  spegnimento_automatico_corridoio:
+    duration: '00:10:00'
 #------------------------------------------------------------------------------
 input_boolean:
 #------------------------------------------------------------------------------
@@ -114,24 +116,6 @@ script:
 #------------------------------------------------------------------------------
 automation:
 #------------------------------------------------------------------------------
-
-#******************************************************************************
-#  - alias: "Giorno"
-#    trigger:
-#      platform: time
-#      at: '6:30'
-#    action:
-#      service: homeassistant.turn_on
-#      entity_id: input_boolean.giorno
-#******************************************************************************
-#  - alias: "Notte"
-#    trigger:
-#      platform: time
-#      at: '16:00:00'
-#    action:
-#      service: homeassistant.turn_off
-#      entity_id: input_boolean.giorno
-#******************************************************************************
   - alias: "Giorno"
     trigger:
       platform: time
@@ -1078,3 +1062,40 @@ automation:
           media_content_id: !secret computerbeep_12
       - service: light.toggle
         entity_id: light.luci_salotto_tutte
+
+  - alias: 'Accende luci prova1 con pulsante a muro'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.wallswitch_2_button_1
+        to: 'on'
+    action:
+      - service: mqtt.publish
+        data:
+          topic: 'sensors/rf/receiver'
+          payload: '1111111'
+          retain: 'true'
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.googlehomesalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
+      - service: light.toggle
+        entity_id: light.light_desk
+  - alias: 'Accende luci prova1 con pulsante a muro'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.wallswitch_2_button_2
+        to: 'on'
+    action:
+      - service: mqtt.publish
+        data:
+          topic: 'sensors/rf/receiver'
+          payload: '1111111'
+          retain: 'true'
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.googlehomesalotto
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
+      - service: light.toggle
+        entity_id: light.light_desk
