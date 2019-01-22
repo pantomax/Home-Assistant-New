@@ -23,7 +23,7 @@ timer:
   spegnimento_bagno:
     duration: '00:00:08'
   spegnimento_automatico_corridoio:
-    duration: '00:10:00'
+    duration: '00:02:00'
 #------------------------------------------------------------------------------
 input_boolean:
 #------------------------------------------------------------------------------
@@ -230,140 +230,7 @@ automation:
         entity_id: light.giardino
       - service: light.turn_off
         entity_id: light.giardino
-#******************************************************************************
-#*****************************   CORRIDOIO   **********************************
-#******************************************************************************
-  - alias: "Accendi Luci corridoio con sensore"
-    trigger:
-      - platform: state
-        entity_id: binary_sensor.movimento_corridoio
-        to: 'on'
-    condition:
-    - condition: and
-      conditions:
-      - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
-      - condition: state
-        entity_id: binary_sensor.permetti_accensione_luci
-        state: 'on'
-    action:
-      - service: switch.turn_on
-        entity_id: switch.corridoio_bagno
-      - service: switch.turn_on
-        entity_id: switch.corridoio_porta
-      - service: input_number.set_value
-        data_template:
-         entity_id: input_number.countdown_corridoio
-         value: "360"
-      - service: mqtt.publish
-        data:
-          topic: 'sensors/rf/receiver'
-          payload: '1111111'
-          retain: 'true'
-#******************************************************************************
-  - alias: "Spegni Luci corridoio"
-    trigger:
-      - platform: state
-        entity_id: binary_sensor.movimento_corridoio
-        to: 'off'
-    condition:
-      condition: template
-      value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
-    action:
-      - service: switch.turn_off
-        entity_id: switch.corridoio_bagno
-      - service: switch.turn_off
-        entity_id: switch.corridoio_porta
-#******************************************************************************
-  - alias: "Accendi Luci corridoio con porta"
-    trigger:
-      - platform: state
-        entity_id: binary_sensor.porta_retro
-        to: 'on'
-      - platform: state
-        entity_id: binary_sensor.porta_corridoio
-        to: 'on'
-    action:
-      - service: switch.turn_on
-        entity_id: switch.corridoio_bagno
-      - service: switch.turn_on
-        entity_id: switch.corridoio_porta
-      - service: input_number.set_value
-        data_template:
-         entity_id: input_number.countdown_corridoio
-         value: "360"
-#******************************************************************************  
-  - alias: "Spegni Luci corridoio con porte"
-    trigger:
-      - platform: state
-        entity_id: binary_sensor.porta_retro
-        to: 'off'
-      - platform: state
-        entity_id: binary_sensor.porta_corridoio
-        to: 'off'
-    condition:
-    - condition: and
-      conditions:
-      - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
-      - condition: state
-        entity_id: binary_sensor.movimento_corridoio
-        state: 'off'
-    action:
-      - service: switch.turn_off
-        entity_id: switch.corridoio_bagno
-      - service: switch.turn_off
-        entity_id: switch.corridoio_porta
-      - service: input_number.set_value
-        data_template:
-         entity_id: input_number.countdown_corrifoio
-         value: "0"
-#******************************************************************************
-  - alias: "Start Countdown spegnimento luci corridoio"
-    trigger:
-      platform: numeric_state
-      entity_id: input_number.countdown_corridoio
-      above: '0'
-    action:
-      service: script.turn_on
-      entity_id: script.scala_corridoio
-#******************************************************************************
-  - alias: "Stop Countdown spegnimento luci corridoio"
-    trigger:
-      platform: numeric_state
-      entity_id: input_number.countdown_corridoio
-      below: '1'
-    condition:
-      condition: state
-      entity_id: binary_sensor.movimento_corridoio
-      state: 'off'
-    action:
-      - service: switch.turn_off
-        entity_id: switch.corridoio_bagno
-      - service: switch.turn_off
-        entity_id: switch.corridoio_porta
-#******************************************************************************
-  - alias: "Controlla ogni 5 minuti e spegne luci corridoio"
-    trigger:
-      platform: time
-      minutes: '/5'
-      seconds: 00
-    condition:
-    - condition: and
-      conditions:
-      - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
-      - condition: state
-        entity_id: binary_sensor.movimento_corridoio
-        state: 'off'
-      - condition: state
-        entity_id: binary_sensor.porta_retro
-        state: 'off'
-    action:
-      - service: switch.turn_off
-        entity_id: switch.corridoio_bagno
-      - service: switch.turn_off
-        entity_id: switch.corridoio_porta
+
 #******************************************************************************
 #******************************   CUCINA   ************************************
 #******************************************************************************
@@ -1118,3 +985,94 @@ automation:
           media_content_id: !secret computerbeep_12
       - service: scene.turn_on
         entity_id: scene.buona_notte
+#******************************************************************************
+#*****************************   CORRIDOIO   **********************************
+#******************************************************************************
+  - alias: "Accendi Luci corridoio con sensore"
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.movimento_corridoio
+        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.porta_retro
+        to: 'on'
+      - platform: state
+        entity_id: binary_sensor.porta_corridoio
+        to: 'on'
+    condition:
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
+      - condition: template
+        value_template: "{{ not is_state('input_select.house_mode', 'Dog Mode') }}"
+    action:
+      - service: light.turn_on
+        entity_id: light.luci_corridoio_tutte
+      - service: timer.start
+        entity_id: timer.spegnimento_automatico_corridoio
+      - service: mqtt.publish
+        data:
+          topic: 'sensors/rf/receiver'
+          payload: '1111111'
+          retain: 'true'
+#******************************************************************************
+  - alias: "Spegni Luci corridoio"
+    trigger:
+      - platform: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.spegnimento_automatico_bagno
+    condition:
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
+      - condition: state
+        entity_id: binary_sensor.movimento_corridoio
+        to: 'off'
+      - condition: state
+        entity_id: binary_sensor.porta_retro
+        state: 'off'
+    action:
+      - service: light.turn_off
+        entity_id: light.luci_corridoio_tutte
+#******************************************************************************
+  - alias: "Reset timer Luci corridoio"
+    trigger:
+      - platform: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.spegnimento_automatico_bagno
+    condition:
+    - condition: or
+      conditions:
+      - condition: state
+        entity_id: binary_sensor.movimento_corridoio
+        to: 'on'
+      - condition: state
+        entity_id: binary_sensor.porta_retro
+        state: 'on'
+    action:
+      - service: timer.start
+        entity_id: timer.spegnimento_automatico_corridoio
+#******************************************************************************
+  - alias: "Controlla ogni 5 minuti e spegne luci corridoio"
+    trigger:
+      platform: time
+      minutes: '/5'
+      seconds: 00
+    condition:
+    - condition: and
+      conditions:
+      - condition: template
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
+      - condition: state
+        entity_id: binary_sensor.movimento_corridoio
+        state: 'off'
+      - condition: state
+        entity_id: binary_sensor.porta_retro
+        state: 'off'
+    action:
+      - service: light.turn_off
+        entity_id: light.luci_corridoio_tutte
