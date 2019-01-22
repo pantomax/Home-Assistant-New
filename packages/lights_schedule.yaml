@@ -151,7 +151,7 @@ automation:
       below: 1
     action:
       service: light.turn_on
-      entity_id: light.giardino
+      entity_id: light.luci_giardino_tutte
 #******************************************************************************
   - alias: "Exterior Lighting off at 23.30"
     trigger:
@@ -162,7 +162,7 @@ automation:
       value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       service: light.turn_off
-      entity_id: light.giardino
+      entity_id: light.luci_giardino_tutte
 #******************************************************************************
   - alias: "Exterior Lighting off at 23.31"
     trigger:
@@ -173,7 +173,7 @@ automation:
       value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       service: light.turn_off
-      entity_id: light.giardino
+      entity_id: light.luci_giardino_tutte
 #******************************************************************************
   - alias: "Controllo spegnimento luce giardino in caso di riavvii del server - Accensione"
     trigger:
@@ -184,7 +184,7 @@ automation:
       value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       service: light.turn_on
-      entity_id: light.giardino
+      entity_id: light.luci_giardino_tutte
 #******************************************************************************
   - alias: "Controllo spegnimento luce giardino in caso di riavvii del server - Spegnimento"
     trigger:
@@ -195,7 +195,7 @@ automation:
       value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       service: light.turn_off
-      entity_id: light.giardino
+      entity_id: light.luci_giardino_tutte
 #******************************************************************************
   - alias: Turn on garden lights when there is movement 
     trigger:
@@ -207,7 +207,7 @@ automation:
       after: '22:00'
     action:
       service: light.turn_on
-      entity_id: light.giardino
+      entity_id: light.luci_giardino_tutte
 #******************************************************************************
   - alias: Turn off garden light 1 minutes after last movement
     trigger:
@@ -225,11 +225,11 @@ automation:
         value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       - service: light.turn_off
-        entity_id: light.giardino
+        entity_id: light.luci_giardino_tutte
       - service: light.turn_off
-        entity_id: light.giardino
+        entity_id: light.luci_giardino_tutte
       - service: light.turn_off
-        entity_id: light.giardino
+        entity_id: light.luci_giardino_tutte
 
 #******************************************************************************
 #******************************   CUCINA   ************************************
@@ -249,7 +249,7 @@ automation:
         state: 'on'
     action:
       - service: light.turn_on
-        entity_id: group.kitchen
+        entity_id: light.luci_cucina_tutte
 #******************************************************************************
   - alias: "Spegni Luce Cucina"
     trigger:
@@ -261,7 +261,7 @@ automation:
       value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       - service: light.turn_off
-        entity_id: group.kitchen
+        entity_id: light.luci_cucina_tutte
 #******************************************************************************
   - alias: "Accendi Luce Cucina all'apertura della porta"
     trigger:
@@ -279,7 +279,7 @@ automation:
           media_content_type: "AUDIO"
           media_content_id: !secret computerbeep_12
       - service: light.turn_on
-        entity_id: group.kitchen
+        entity_id: light.luci_cucina_tutte
 #******************************************************************************
   - alias: "Spegni Luce Cucina dopo 60 secondi dall'apertura della porta"
     trigger:
@@ -296,7 +296,7 @@ automation:
         value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       - service: light.turn_off
-        entity_id: group.kitchen
+        entity_id: light.luci_cucina_tutte
 #******************************************************************************
   - alias: "Controlla ogni 9 minuti e spegne luci cucina"
     trigger:
@@ -313,7 +313,7 @@ automation:
         state: 'off'
     action:
       - service: light.turn_off
-        entity_id: light.light_kitchen
+        entity_id: light.luci_cucina_tutte
 #******************************************************************************
   - alias: "Luce Cucina Rimani Accesa"
     trigger:
@@ -470,17 +470,11 @@ automation:
       value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       - service: light.turn_off
-        entity_id: light.camera
+        entity_id: light.luci_camera_tutte
       - service: light.turn_off
-        entity_id: light.camera
+        entity_id: light.luci_camera_tutte
       - service: light.turn_off
-        entity_id: light.camera
-      - service: light.turn_off
-        entity_id: light.led_strip_camera
-      - service: light.turn_off
-        entity_id: light.led_strip_camera
-      - service: light.turn_off
-        entity_id: light.led_strip_camera
+        entity_id: light.luci_camera_tutte
 #******************************************************************************
   - alias: "Accende le luci sui comodini tutti i giorni alle 7.20 del lun al ven"
     trigger:
@@ -506,7 +500,7 @@ automation:
           - fri
     action:
       - service: light.turn_on
-        entity_id: light.camera
+        entity_id: light.luci_camera_tutte
 #******************************************************************************
   - alias: "Spegne le luci sui comodini tutti i giorni alle 7.40 del lun al ven"
     trigger:
@@ -522,7 +516,7 @@ automation:
           - fri
     action:
       - service: light.turn_off
-        entity_id: light.camera
+        entity_id: light.luci_camera_tutte
 #******************************************************************************
 #****************************   SCRIVANIA  ************************************
 #******************************************************************************
@@ -536,9 +530,6 @@ automation:
       conditions:
       - condition: template
         value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
-      - condition: state
-        entity_id: binary_sensor.permetti_accensione_luci
-        state: 'on'
     action:
       - service: light.turn_on
         entity_id: light.light_desk
@@ -656,19 +647,11 @@ automation:
       value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
     action:
       - service: light.turn_off
-        entity_id: light.bagno
+        entity_id: light.luci_bagno_tutte
       - service: light.turn_off
-        entity_id: light.led_strip_bagno
+        entity_id: light.luci_bagno_tutte
       - service: light.turn_off
-        entity_id: light.bagno
-      - service: light.turn_off
-        entity_id: light.led_strip_bagno
-      - service: light.turn_off
-        entity_id: light.bagno
-      - service: light.turn_off
-        entity_id: light.led_strip_bagno
-      - service: timer.cancel
-        entity_id: timer.spegnimento_bagno
+        entity_id: light.luci_bagno_tutte
       - service: timer.cancel
         entity_id: timer.spegnimento_automatico_bagno
 #******************************************************************************
@@ -1030,7 +1013,7 @@ automation:
         value_template: "{{ not is_state('input_select.house_mode', 'Lights On') }}"
       - condition: state
         entity_id: binary_sensor.movimento_corridoio
-        to: 'off'
+        state: 'off'
       - condition: state
         entity_id: binary_sensor.porta_retro
         state: 'off'
@@ -1049,7 +1032,7 @@ automation:
       conditions:
       - condition: state
         entity_id: binary_sensor.movimento_corridoio
-        to: 'on'
+        state: 'on'
       - condition: state
         entity_id: binary_sensor.porta_retro
         state: 'on'
