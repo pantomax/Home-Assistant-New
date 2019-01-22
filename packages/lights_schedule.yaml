@@ -1005,7 +1005,7 @@ automation:
       - platform: event
         event_type: timer.finished
         event_data:
-          entity_id: timer.spegnimento_automatico_bagno
+          entity_id: timer.spegnimento_automatico_corridoio
     condition:
     - condition: and
       conditions:
