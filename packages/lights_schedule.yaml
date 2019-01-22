@@ -1020,15 +1020,15 @@ automation:
     action:
       - service: light.turn_off
         entity_id: light.luci_corridoio_tutte
-      - service: timer.cancel
-        entity_id: timer.spegnimento_automatico_corridoio
+#      - service: timer.cancel
+#        entity_id: timer.spegnimento_automatico_corridoio
 #******************************************************************************
   - alias: "Reset timer Luci corridoio"
     trigger:
       - platform: event
         event_type: timer.finished
         event_data:
-          entity_id: timer.spegnimento_automatico_bagno
+          entity_id: timer.spegnimento_automatico_corridoio
     condition:
     - condition: or
       conditions:
@@ -1039,8 +1039,8 @@ automation:
         entity_id: binary_sensor.porta_retro
         state: 'on'
     action:
-      - service: timer.cancel
-        entity_id: timer.spegnimento_automatico_corridoio
+#      - service: timer.cancel
+#        entity_id: timer.spegnimento_automatico_corridoio
       - service: timer.start
         entity_id: timer.spegnimento_automatico_corridoio
 #******************************************************************************
