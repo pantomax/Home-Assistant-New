@@ -51,7 +51,7 @@ automation:
           addon: "core_mosquitto"
       - service: hassio.addon_start
         data:
-          addon: "a0d7b954-pi-hole"
+          addon: "a0d7b954_pi_hole"
       - service: hassio.addon_start
         data:
           addon: "de3cd379_rfreceiver"
