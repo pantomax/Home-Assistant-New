@@ -307,13 +307,19 @@
       friendly_name: "Speedtest Ping"
       icon: mdi:speedometer
     binary_sensor.chromecast_video_salotto_nuovo:
-      friendly_name: "Chromecast Salotto"
-      icon: mdi:google-chrome
-    binary_sensor.chromecast_audio_bagno:
-      friendly_name: "Chromecast Bagno"
+      friendly_name: "C.V. Salotto"
       icon: mdi:google-chrome
     binary_sensor.chromecast_video_cucina:
-      friendly_name: "Chromecast Cucina"
+      friendly_name: "C.V. Cucina"
+      icon: mdi:google-chrome
+    binary_sensor.chromecast_audio_salotto:
+      friendly_name: "C.A. Salotto"
+      icon: mdi:google-chrome
+    binary_sensor.chromecast_audio_cucina:
+      friendly_name: "C.A. Cucina"
+      icon: mdi:google-chrome
+    binary_sensor.chromecast_audio_bagno:
+      friendly_name: "C.A. Bagno"
       icon: mdi:google-chrome
     binary_sensor.luce_accesa_bagno:
       friendly_name: "Luce Bagno"
