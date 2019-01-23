@@ -4,7 +4,7 @@
 #
 ###############################################################################
   - platform: pi_hole
-    host: localhost:4865
+    host: https://192.168.1.101:4865
     monitored_conditions:
       - ads_blocked_today
       - dns_queries_today
