@@ -4,7 +4,7 @@
 #
 ###############################################################################
   - platform: pi_hole
-    host: !secret panel_iframe_pi_hole_url
+    host: localhost:4865
     monitored_conditions:
       - ads_blocked_today
       - dns_queries_today
