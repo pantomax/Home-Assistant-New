@@ -19,18 +19,10 @@
       !secret led_strip_bagno:
         name: led_strip_bagno
         mode: "rgb"
-#*********************************SALOTTO**************************************
+#******************************************************************************
   - platform: template
     lights:
-      tavolino:
-        value_template: "{{ is_state('switch.luce_rf_1', 'on') }}"
-        turn_on:
-          service: switch.turn_on
-          entity_id: switch.luce_rf_1
-        turn_off:
-          service: switch.turn_off
-          entity_id: switch.luce_rf_1
-#******************************************************************************
+#******************************LUCI STANZE INTERE******************************
       luci_cucina_tutte:
         value_template: "{{ is_state('switch.luci_cucina_tutte', 'on') }}"
         turn_on:
@@ -84,6 +76,15 @@
         turn_off:
           service: switch.turn_off
           entity_id: switch.luci_camera_tutte
+#*********************************SALOTTO**************************************
+      tavolino:
+        value_template: "{{ is_state('switch.luce_rf_1', 'on') }}"
+        turn_on:
+          service: switch.turn_on
+          entity_id: switch.luce_rf_1
+        turn_off:
+          service: switch.turn_off
+          entity_id: switch.luce_rf_1
 #******************************************************************************
       libreria:
         value_template: "{{ is_state('switch.luce_rf_2', 'on') }}"

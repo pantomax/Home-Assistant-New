@@ -402,7 +402,7 @@ automation:
   - alias: Cambia stato Guarda TV se Chromecast è on line
     trigger:
       - platform: state
-        entity_id: sensor.livingroomchromecast
+        entity_id: sensor.chromecast_video_salotto_nuovo
         to: 'Online'
     action:
       - service: homeassistant.turn_on

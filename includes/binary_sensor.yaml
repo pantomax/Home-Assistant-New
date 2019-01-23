@@ -85,15 +85,21 @@
         device_class: light
         value_template: "{{ is_state('sensor.luce_accesa_bagno', 'Accesa') }}"
 #************************************ CHROMECASTS *****************************
-      livingroomchromecast:
+      chromecast_video_salotto_nuovo:
         device_class: connectivity
-        value_template: "{{ is_state('device_tracker.chromecast_salotto', 'home') }}"
-      bathroomchromecast:
+        value_template: "{{ is_state('device_tracker.chromecast_video_salotto_nuovo', 'home') }}"
+      chromecast_video_cucina:
         device_class: connectivity
-        value_template: "{{ is_state('device_tracker.chromecast_bagno', 'home') }}"
-      kitchenchromecast:
+        value_template: "{{ is_state('device_tracker.chromecast_video_cucina', 'home') }}"
+      chromecast_audio_bagno:
         device_class: connectivity
-        value_template: "{{ is_state('device_tracker.chromecast_cucina', 'home') }}"
+        value_template: "{{ is_state('device_tracker.chromecast_audio_bagno', 'home') }}"
+      chromecast_audio_cucina:
+        device_class: connectivity
+        value_template: "{{ is_state('device_tracker.chromecast_audio_cucina', 'home') }}"
+      chromecast_audio_salotto:
+        device_class: connectivity
+        value_template: "{{ is_state('device_tracker.chromecast_audio_salotto', 'home') }}"
 #*********************************** ROUTERS ********************************
       mediaaccess_tg589vn_v3:
         device_class: connectivity

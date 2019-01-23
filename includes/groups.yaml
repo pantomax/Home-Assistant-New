@@ -245,12 +245,11 @@
     entities:
       - binary_sensor.mediaaccess_tg589vn_v3
       - binary_sensor.google
-      - sensor.speedtest_ping
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
-      - binary_sensor.livingroomchromecast
-      - binary_sensor.bathroomchromecast
-      - binary_sensor.kitchenchromecast
+      - binary_sensor.chromecast_video_salotto_nuovo
+      - binary_sensor.chromecast_video_cucina
+      - binary_sensor.chromecast_audio_salotto
+      - binary_sensor.chromecast_audio_cucina
+      - binary_sensor.chromecast_audio_bagno
 #      - binary_sensor.sky_hd
       - binary_sensor.slingbox
       - binary_sensor.zidoo
@@ -271,6 +270,11 @@
       - binary_sensor.broadlink_outlet
       - binary_sensor.broadlink_a1
       - binary_sensor.broadlink_s1
+  speedtest:
+    name: Speedtest
+      - sensor.speedtest_ping
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
   condizionatori:
     name: Elettrodomestici
     entities:
@@ -328,6 +332,7 @@
       - sensor.memory_use_percent
       - sensor.network_out_eth0
       - sensor.network_in_eth0
+      
       - script.reboot
       - automation.chromecast_in_stop
   pc_windows:
@@ -605,6 +610,7 @@
       - group.dash_buttons
       - group.rete
       - group.broadlink_network
+      - group.speedtest
       - group.condizionatori
       - group.dev_pi
 #      - group.nabaztag

@@ -140,7 +140,7 @@ automation:
   - alias: "Spegni mediaplayer se va offline"
     trigger:
       - platform: state
-        entity_id: sensor.livingroomchromecast
+        entity_id: sensor.chromecast_video_salotto_nuovo
         to: 'Offline'
     action:
          service: media_player.turn_off

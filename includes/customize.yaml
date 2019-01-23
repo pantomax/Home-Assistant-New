@@ -306,13 +306,13 @@
     sensor.speedtest_ping:
       friendly_name: "Speedtest Ping"
       icon: mdi:speedometer
-    binary_sensor.livingroomchromecast:
+    binary_sensor.chromecast_video_salotto_nuovo:
       friendly_name: "Chromecast Salotto"
       icon: mdi:google-chrome
-    binary_sensor.bathroomchromecast:
+    binary_sensor.chromecast_audio_bagno:
       friendly_name: "Chromecast Bagno"
       icon: mdi:google-chrome
-    binary_sensor.kitchenchromecast:
+    binary_sensor.chromecast_video_cucina:
       friendly_name: "Chromecast Cucina"
       icon: mdi:google-chrome
     binary_sensor.luce_accesa_bagno:

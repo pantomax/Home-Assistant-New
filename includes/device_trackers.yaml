@@ -17,9 +17,11 @@
       zidoo: !secret zidoo
       google: !secret google
 #******************************************************************************
-      chromecast_salotto: !secret chromecast_salotto_nuovo
-      chromecast_cucina: !secret chromecast_cucina
-      chromecast_bagno: !secret chromecast_bagno
+      chromecast_video_salotto_nuovo: !secret chromecast_video_salotto_nuovo
+      chromecast_video_cucina: !secret chromecast_video_cucina
+      chromecast_audio_bagno: !secret chromecast_audio_bagno
+      chromecast_audio_salotto: !secret chromecast_audio_salotto
+      chromecast_audio_cucina: !secret chromecast_audio_cucina
 #******************************************************************************
       maurolavoro: !secret maurolavoro
       mauropersonale: !secret mauropersonale

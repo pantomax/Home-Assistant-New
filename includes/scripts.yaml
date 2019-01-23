@@ -37,7 +37,7 @@
     - service: input_boolean.turn_on
       data_template:
         entity_id: >
-            {% if is_state("sensor.livingroomchromecast", "Online") %} input_boolean.guarda_tv
+            {% if is_state("sensor.chromecast_video_salotto_nuovo", "Online") %} input_boolean.guarda_tv
             {% endif %}
 #******************************************************************************
   reboot:

@@ -173,15 +173,15 @@
         value_template: "{{ states('sensor.temperatura_salotto_temperature')|float - 2 }}"
 #******************************************************************************
 # Stato dispositivi in rete
-      livingroomchromecast:
+      chromecast_video_salotto_nuovo:
         friendly_name: 'Chromecast Salotto'
-        value_template: "{{ 'Online' if is_state('device_tracker.chromecast_salotto', 'home') else 'Offline' }}"
-      bathroomchromecast:
+        value_template: "{{ 'Online' if is_state('device_tracker.chromecast_video_salotto_nuovo', 'home') else 'Offline' }}"
+      chromecast_audio_bagno:
         friendly_name: 'Chromecast Bagno'
-        value_template: "{{ 'Online' if is_state('device_tracker.chromecast_bagno', 'home') else 'Offline' }}"
-      kitchenchromecast:
+        value_template: "{{ 'Online' if is_state('device_tracker.chromecast_audio_bagno', 'home') else 'Offline' }}"
+      chromecast_video_cucina:
         friendly_name: 'Chromecast Cucina'
-        value_template: "{{ 'Online' if is_state('device_tracker.chromecast_cucina', 'home') else 'Offline' }}"
+        value_template: "{{ 'Online' if is_state('device_tracker.chromecast_video_cucina', 'home') else 'Offline' }}"
       computersalotto:
         friendly_name: 'Computer Salotto'
         value_template: "{{ 'Online' if is_state('device_tracker.computersalotto', 'home') else 'Offline' }}"
