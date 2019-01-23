@@ -337,6 +337,7 @@
       - sensor.network_out_eth0
       - sensor.network_in_eth0
       - input_boolean.riavvio_giornaliero
+      - scene.stop_reboot
       - script.reboot
       - automation.chromecast_in_stop
   pc_windows:
