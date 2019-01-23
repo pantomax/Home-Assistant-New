@@ -244,6 +244,8 @@
     name: Rete Casa
     entities:
       - binary_sensor.mediaaccess_tg589vn_v3
+      - binary_sensor.netgear_repeater
+      - binary_sensor.tp_link
       - binary_sensor.google
       - binary_sensor.chromecast_video_salotto_nuovo
       - binary_sensor.chromecast_video_cucina
@@ -281,6 +283,8 @@
       - binary_sensor.condizionatore_camera
       - binary_sensor.condizionatore_salotto
       - binary_sensor.led_strip_salotto
+      - binary_sensor.led_strip_camera
+      - binary_sensor.led_strip_bagno
       - binary_sensor.multipresa_wifi
       - input_boolean.visualizza_gruppo_dashbutton
   pihole:
