@@ -4,7 +4,7 @@
 #
 ###############################################################################
   - platform: pi_hole
-    host: https://192.168.1.101:4865
+    host: !secret panel_iframe_pi_hole_url
     monitored_conditions:
       - ads_blocked_today
       - dns_queries_today
