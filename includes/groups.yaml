@@ -336,7 +336,7 @@
       - sensor.memory_use_percent
       - sensor.network_out_eth0
       - sensor.network_in_eth0
-      
+      - input_boolean.riavvio_giornaliero
       - script.reboot
       - automation.chromecast_in_stop
   pc_windows:

@@ -181,6 +181,9 @@
     input_boolean.motion_timer:
       friendly_name: "Motion Timer"
       icon: mdi:toggle-switch
+    input_boolean.riavvio_giornaliero:
+      friendly_name: "Riavvio giornalier"
+      icon: mdi:restart
     media_player.chromecastvideosalotto:
       friendly_name: "Chromecast"
       icon: mdi:google-chromecast
