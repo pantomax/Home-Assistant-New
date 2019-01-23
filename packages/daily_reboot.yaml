@@ -1,0 +1,66 @@
+###############################################################################
+#
+#                                 DAILY REBOOT
+#
+###############################################################################
+#------------------------------------------------------------------------------
+input_boolean:
+#------------------------------------------------------------------------------
+  riavvio_giornaliero:
+    name: Riavvio giornaliero
+    initial: on
+#------------------------------------------------------------------------------
+timer:
+#------------------------------------------------------------------------------
+  riavvio_server:
+    duration: '00:02:00'
+#------------------------------------------------------------------------------
+automation:
+#------------------------------------------------------------------------------
+  - alias: "Restart HA during the weekdays"
+    trigger: 
+      platform: time
+      at: "16:30:00"
+    condition:
+      condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+    action:
+      - service: notify.notify
+        data:
+          message: "Home Assistant in riavvio automatico giornaliero tra 120 secondi."
+      - service: timer.start
+        entity_id: timer.riavvio_server
+#******************************************************************************
+  - alias: "Restart HA during the weekend"
+    trigger: 
+      platform: time
+      at: "08:00:00"
+    condition:
+      condition: time
+      weekday:
+      - sat
+      - sun
+    action:
+      - service: notify.notify
+        data:
+          message: "Home Assistant in riavvio automatico giornaliero tra 120 secondi."
+      - service: timer.start
+        entity_id: timer.riavvio_server
+#******************************************************************************
+  - alias: 'Riavvia il server al termine del countdown '
+    trigger:
+      - platform: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.riavvio_server
+    condition:
+      - condition: state
+        entity_id: binary_sensor.riavvio_giornaliero
+        state: 'on'
+    action:
+      - service: homeassistant.restart
