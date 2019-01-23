@@ -6,7 +6,7 @@
         - light.mobile_tv
         - light.retro_tv
         - light.light_desk
-        - light.led_strip
+        - light.led_strip_salotto
         - light.light_kitchen
         - light.light_kitchen_2
         - light.corridoio_bagno
@@ -79,7 +79,7 @@
         aliases:
           - luce sulla scrivania
           - entity t 5
-      light.led_strip:
+      light.led_strip_salotto:
         name: striscia led
         aliases:
           - luce led
@@ -333,7 +333,7 @@
         name: scrivania
         description: luce sulla scrivania
         display_categories: LIGHT
-      light.led_strip:
+      light.led_strip_salotto:
         name: striscia led
         description: luce led
         display_categories: LIGHT

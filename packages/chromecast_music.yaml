@@ -64,24 +64,24 @@ automation:
         entity_id: switch.input_hdmi2
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: purple
           brightness: 255
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           brightness: 0
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: purple
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: colorjump
       - service: script.turn_on
         entity_id: script.flash_room1
@@ -95,11 +95,11 @@ automation:
     action:
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           brightness: 0
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           transition: "20"
       - service: light.turn_on
         entity_id:

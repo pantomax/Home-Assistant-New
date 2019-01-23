@@ -42,7 +42,7 @@ script:
             state: 'triggered'
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           state: on
           brightness: 255
           color_name: red
@@ -50,18 +50,18 @@ script:
         entity_id: switch.corridoio_bagno
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: red_strobe
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           brightness: 0
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: red_strobe
       - service: media_player.play_media
         data:
@@ -194,11 +194,11 @@ automation:
           seconds: 15    
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           brightness: 255
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
 #******************************************************************************
   - alias: 'Beep on pending'
     trigger:

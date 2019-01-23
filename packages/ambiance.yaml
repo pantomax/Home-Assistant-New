@@ -22,14 +22,14 @@ script:
         entity_id: input_boolean.scene
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: media_player.turn_off
         data:
@@ -47,28 +47,28 @@ script:
           media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: red
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: red
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: red_fade
       - service: media_player.volume_mute
         data:
@@ -104,32 +104,32 @@ script:
           media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: green
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: green
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: green_fade
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: media_player.volume_mute
         data:
@@ -165,28 +165,28 @@ script:
           media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: cyan
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: cyan
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: cyan_fade
       - service: media_player.volume_mute
         data:
@@ -222,32 +222,32 @@ script:
           media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: purple
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: purple
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: purple_fade
       - service: media_player.volume_mute
         data:
@@ -283,28 +283,28 @@ script:
           media_content_id: !secret hologram_on
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: cyan
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: cyan
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: cyan_fade
       - service: media_player.volume_mute
         data:
@@ -335,31 +335,31 @@ script:
         entity_id: input_boolean.scene
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: blue_strobe
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: blue_strobe
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - delay: 00:00:02
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: blue_fade
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
 #      - service: hassio.addon_stdin
 #        data:
@@ -382,12 +382,12 @@ script:
       - delay: 00:00:05
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: blue
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
 #******************************************************************************
   black_alert_1:
@@ -397,23 +397,23 @@ script:
         entity_id: input_boolean.scene
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: blue_strobe
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: blue_strobe
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - delay: 00:00:02
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: blue_fade
       - service: media_player.play_media
         data:
@@ -432,12 +432,12 @@ script:
       - delay: 00:00:05
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: blue
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - service: media_player.play_media
         data:
@@ -484,27 +484,27 @@ script:
         entity_id: input_boolean.scene
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: red_strobe
       - service: light.turn_off
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: red_strobe
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
       - delay: 00:00:01
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: red_fade
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
 #      - service: hassio.addon_stdin
 #        data:
@@ -527,11 +527,11 @@ script:
       - delay: 00:00:15
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: red
           brightness: 255
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: 0
 #******************************************************************************

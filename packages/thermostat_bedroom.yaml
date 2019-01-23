@@ -27,7 +27,7 @@ sensor:
       temperatura_corretta_camera_per_termostato:
         friendly_name: "Temperatura camera"
         unit_of_measurement: '°C'
-        value_template: "{{ states('sensor.temperatura_camera_temperature')|float - 2 }}"
+        value_template: "{{ states('sensor.temperatura_camera_temperature')|float - 2.5 }}"
 #******************************************************************************
   - platform: template
     sensors:

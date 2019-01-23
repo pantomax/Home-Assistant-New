@@ -786,7 +786,7 @@ automation:
     action:
       - service: light.turn_on
         data_template:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           rgb_color: ["{{ (states('input_number.r_color')|int) }}", "{{ (states('input_number.g_color')|int) }}", "{{ (states('input_number.b_color')|int) }}"]
           brightness: "{{ states('input_number.brightness_rgb')|int }}"
           white_value: "{{ states('input_number.brightness_white') | int }}"
@@ -836,7 +836,7 @@ automation:
     action:
       - service: light.turn_on
         data_template:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           color_name: "{{ states('input_select.color_name') }}"
           brightness_pct: "{{ states('input_number.brightness_list')|int }}"
           white_value: "{{ states('input_number.brightness_white') | int }}"
@@ -876,7 +876,7 @@ automation:
     action:
       - service: light.turn_on
         data_template:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           white_value: "{{ states('input_number.brightness_white') | int }}"
 
   - alias: "led brightness white camera"
@@ -908,7 +908,7 @@ automation:
     action:
       - service: light.turn_on
         data_template:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           profile: "{{ states('input_select.profile') }}"
 
   - alias: "led brightness profile_camera"
@@ -942,11 +942,11 @@ automation:
     action:
       - service: light.turn_on
         data:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           brightness: 0
       - service: light.turn_on
         data_template:
-          entity_id: light.led_strip
+          entity_id: light.led_strip_salotto
           effect: "{{ states('input_select.effect_name') }}"
 
   - alias: "led effect list camera"

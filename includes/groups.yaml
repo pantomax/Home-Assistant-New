@@ -50,7 +50,7 @@
       - light.light_desk
       - light.retro_tv
       - light.insettivoro
-      - light.led_strip
+      - light.led_strip_salotto
   kitchen:
     name: Luci Cucina
     entities:
@@ -168,7 +168,7 @@
       - light.insettivoro
       - light.mobile_tv
       - light.retro_tv
-      - light.led_strip
+      - light.led_strip_salotto
 #******************************************************************************
 #  Meteo_Wunderground:
 #    name: Meteo
@@ -276,7 +276,7 @@
     entities:
       - binary_sensor.condizionatore_camera
       - binary_sensor.condizionatore_salotto
-      - binary_sensor.led_strip
+      - binary_sensor.led_strip_salotto
       - binary_sensor.multipresa_wifi
       - input_boolean.visualizza_gruppo_dashbutton
   pihole:
@@ -434,7 +434,7 @@
       - light.mobile_tv
       - light.retro_tv
       - light.light_desk
-      - light.led_strip
+      - light.led_strip_salotto
       - light.light_kitchen
       - light.corridoio_bagno
       - light.corridoio_porta
@@ -491,7 +491,7 @@
       - binary_sensor.broadlink_sp_mini_2
       - binary_sensor.broadlink_sp_mini_3
       - binary_sensor.broadlink_sp_mini_4
-      - binary_sensor.led_strip
+      - binary_sensor.led_strip_salotto
       - binary_sensor.luce_bagno
       - binary_sensor.motion_sensor_rf_1
       - binary_sensor.motion_sensor_rf_2

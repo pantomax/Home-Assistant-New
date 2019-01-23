@@ -52,7 +52,7 @@ google_assistant:
       aliases:
         - luce sulla scrivania
         - entity t 5
-    light.led_strip:
+    light.led_strip_salotto:
       name: striscia led
       expose: true
       aliases:

@@ -40,7 +40,7 @@
           (is_state('light.light_desk','on')) or
           (is_state('light.retro_tv','on')) or
           (is_state('light.insettivoro','on')) or
-          (is_state('light.led_strip','on')) %}
+          (is_state('light.led_strip_salotto','on')) %}
           on
           {% else %}
           off
@@ -69,7 +69,7 @@
             entity_id: light.insettivoro
         - service: light.turn_on
           data:
-            entity_id: light.led_strip
+            entity_id: light.led_strip_salotto
         turn_off:
         - service: light.turn_off
           data:
@@ -94,7 +94,7 @@
             entity_id: light.insettivoro
         - service: light.turn_off
           data:
-            entity_id: light.led_strip
+            entity_id: light.led_strip_salotto
 #*************************** TUTTE LUCI BAGNO *********************************
   - platform: template
     switches:

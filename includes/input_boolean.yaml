@@ -3,7 +3,7 @@
 #                                  INPUT BOOLEANS
 #
 ###############################################################################
-  led_strip:
+  led_strip_salotto:
     name: Striscia Led
     initial: off
     icon: mdi:account

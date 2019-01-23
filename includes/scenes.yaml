@@ -31,7 +31,7 @@
       light.mobile_tv: off
       light.retro_tv: off
       light.light_desk: off
-      light.led_strip:
+      light.led_strip_salotto:
         state: off
 #^^^^^^^^^CORRIDOIO^^^^^^^^^^^^^^^^^^^^^^
       light.corridoio_bagno: off
@@ -56,7 +56,7 @@
       light.mobile_tv: off
       light.retro_tv: on
       light.light_desk: off
-      light.led_strip:
+      light.led_strip_salotto:
         state: on
         brightness: 255
         rgb_color: [164,73,255]
@@ -80,7 +80,7 @@
       light.retro_tv: on
       light.light_desk: on
       script.luci_sala_accese: on
-      light.led_strip:
+      light.led_strip_salotto:
         state: on
         brightness: 0
         white_value: 255
@@ -96,7 +96,7 @@
       light.mobile_tv: off
       light.retro_tv: off
       light.light_desk: off
-      light.led_strip:
+      light.led_strip_salotto:
         state: on
         brightness: 0
         white_value: 0
@@ -123,7 +123,7 @@
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       switch.insettivoro: on
       script.black_alert: on
-      light.led_strip:
+      light.led_strip_salotto:
         state: on
         brightness: 255
         color_name: blue
@@ -145,7 +145,7 @@
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       switch.insettivoro: on
       script.black_alert_1: on
-      light.led_strip:
+      light.led_strip_salotto:
         state: on
         brightness: 255
         color_name: blue
@@ -167,7 +167,7 @@
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
       switch.insettivoro: off
       script.red_alert: on
-      light.led_strip:
+      light.led_strip_salotto:
         state: on
         brightness: 255
         color_name: red
@@ -176,7 +176,7 @@
 #******************************************************************************
   - name: Alert Off
     entities:
-      light.led_strip:
+      light.led_strip_salotto:
         state: on
         brightness: 0
         white_value: 0
