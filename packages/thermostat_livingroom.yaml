@@ -27,7 +27,7 @@ sensor:
       temperatura_corretta_salotto_per_termostato:
         friendly_name: "Temperatura Salotto"
         unit_of_measurement: '°C'
-        value_template: "{{ states('sensor.temperatura_salotto_temperature')|float - 1.8 }}"
+        value_template: "{{ states('sensor.temperatura_salotto_temperature')|float - 1.6 }}"
 #******************************************************************************
   - platform: template
     sensors:
