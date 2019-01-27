@@ -74,11 +74,11 @@ automation:
           {%-elif is_state("input_select.radio_station", "Flaixa FM") %}
             http://radiostream.flaixfm.cat:8002/;stream.nsv
           {%-elif is_state("input_select.radio_station", "Nova 100") %}
-            http://streaming.novaentertainment.com.au/nova100
+            http://19763.live.streamtheworld.com:3690/977_HITS_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2
           {%-elif is_state("input_select.radio_station", "SmoothFM") %}
-            http://streaming.novaentertainment.com.au/smooth915 
+            http://onair.krone.at/kronehit-event2.mp3 
           {%-elif is_state("input_select.radio_station", "SBS Chill") %}
-            http://shoutcast.sbs.com.au/SBSChill
+            http://shoutcast.radio24.it:8000/
           {% else %}
             "None"
           {% endif %}

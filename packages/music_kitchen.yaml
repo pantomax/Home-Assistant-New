@@ -106,11 +106,11 @@ script:
           {%-elif is_state("input_number.numero_radio_cucina", "2.0") %}
             http://radiostream.flaixfm.cat:8002/;stream.nsv
           {%-elif is_state("input_number.numero_radio_cucina", "3.0") %}
-            http://streaming.novaentertainment.com.au/nova100
+            http://19763.live.streamtheworld.com:3690/977_HITS_SC?DIST=TuneIn&amp;TGT=TuneIn&amp;maxServers=2
           {%-elif is_state("input_number.numero_radio_cucina", "4.0") %}
-            http://streaming.novaentertainment.com.au/smooth915 
+            http://onair.krone.at/kronehit-event2.mp3 
           {%-elif is_state("input_number.numero_radio_cucina", "5.0") %}
-            http://shoutcast.sbs.com.au/SBSChill
+            http://shoutcast.radio24.it:8000/
           {% else %}
             "None"
           {% endif %}
