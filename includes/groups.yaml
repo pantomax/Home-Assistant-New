@@ -43,7 +43,7 @@
   living_room:
     name: Luci Sala
     entities:
-      - light.tavolino
+      - light.tavolino_2
       - light.libreria
       - light.soffitto
       - light.mobile_tv

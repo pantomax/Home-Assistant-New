@@ -25,7 +25,7 @@
   - name: Buona notte PC
     entities:
 #^^^^^^^^^SALOTTO^^^^^^^^^^^^^^^^^^^^^^
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: off
       light.mobile_tv: off
@@ -50,7 +50,7 @@
   - name: Film
     entities:
       input_boolean.scene: off
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: off
       light.mobile_tv: off
@@ -73,7 +73,7 @@
   - name: Luci Sala Accese
     entities:
       input_boolean.scene: off
-      light.tavolino: on
+      light.tavolino_2: on
       light.libreria: on
       light.soffitto: on
       light.mobile_tv: on
@@ -90,7 +90,7 @@
   - name: Luci Sala Spente
     entities:
       input_boolean.scene: off
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: off
       light.mobile_tv: off
@@ -111,7 +111,7 @@
   - name: Black Alert
     entities:
       switch.input_hdmi2: on
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: off
       light.mobile_tv: off
@@ -133,7 +133,7 @@
   - name: Black Alert 1
     entities:
       switch.input_hdmi2: on
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: off
       light.mobile_tv: off
@@ -155,7 +155,7 @@
   - name: Red Alert
     entities:
       switch.input_hdmi2: on
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: off
       light.mobile_tv: off
@@ -183,7 +183,7 @@
   - name: Foresta
     entities:
       switch.input_hdmi2: on
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: on
       light.mobile_tv: on
@@ -198,7 +198,7 @@
   - name: Inverno
     entities:
       switch.input_hdmi2: on
-      light.tavolino: on
+      light.tavolino_2: on
       light.libreria: off
       light.soffitto: off
       light.mobile_tv: off
@@ -213,7 +213,7 @@
   - name: Oceano
     entities:
       switch.input_hdmi2: on
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: on
       light.mobile_tv: on
@@ -228,7 +228,7 @@
   - name: Acquario
     entities:
       switch.input_hdmi2: on
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: of
       light.mobile_tv: on
@@ -243,7 +243,7 @@
   - name: Club
     entities:
       switch.input_hdmi2: on
-      light.tavolino: off
+      light.tavolino_2: off
       light.libreria: off
       light.soffitto: off
       light.mobile_tv: on
