@@ -1007,7 +1007,7 @@ automation:
       - service: light.toggle
         entity_id: light.luci_salotto_tutte
 
-  - alias: 'Accende luci bagno con pulsante a muro'
+  - alias: 'Riproduce musica in bagno con pulsante a muro'
     trigger:
       - platform: state
         entity_id: binary_sensor.wallswitch_2_button_1
@@ -1023,9 +1023,12 @@ automation:
           entity_id: media_player.googlehomebagno
           media_content_type: "AUDIO"
           media_content_id: !secret computerbeep_12
-      - service: light.toggle
-        entity_id: light.luci_bagno_tutte
-  - alias: 'Accende luci corridoio con pulsante a muro'
+      - service: script.turn_on
+        data:
+          entity_id: script.radio_successiva_con_dash_button
+#      - service: light.toggle
+#        entity_id: light.luci_bagno_tutte
+  - alias: 'Ferma musica in bagno con pulsante a muro'
     trigger:
       - platform: state
         entity_id: binary_sensor.wallswitch_2_button_2
@@ -1041,8 +1044,11 @@ automation:
           entity_id: media_player.googlehomebagno
           media_content_type: "AUDIO"
           media_content_id: !secret computerbeep_12
-      - service: light.toggle
-        entity_id: light.luci_corridoio_tutte
+      - service: script.turn_on
+        data:
+          entity_id: script.arresta_musica_con_dash_button
+#      - service: light.toggle
+#        entity_id: light.luci_corridoio_tutte
 
   - alias: 'Spegne tutte le luci'
     trigger:
@@ -1057,8 +1063,28 @@ automation:
           retain: 'true'
       - service: media_player.play_media
         data:
-          entity_id: media_player.googlehomesalotto
+          entity_id: media_player.googlehomecucina
           media_content_type: "AUDIO"
           media_content_id: !secret computerbeep_12
       - service: scene.turn_on
         entity_id: scene.buona_notte
+  
+  - alias: 'Spegne le luci di corridoio e bagno'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.wallswitch_4_button_1
+        to: 'on'
+    action:
+      - service: mqtt.publish
+        data:
+          topic: 'sensors/rf/receiver'
+          payload: '1111111'
+          retain: 'true'
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.googlehomebagno
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
+      - service: homeassistant.turn_off
+        entity_id: group.luci_corridoio_e_bagno
+
