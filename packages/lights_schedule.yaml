@@ -118,7 +118,7 @@ automation:
 #------------------------------------------------------------------------------
   - alias: "Giorno"
     trigger:
-      platform: time
+      platform: time_pattern
       minutes: '/5'
       seconds: 00
     condition:
@@ -131,7 +131,7 @@ automation:
 #******************************************************************************
   - alias: "Notte"
     trigger:
-      platform: time
+      platform: time_pattern
       minutes: '/5'
       seconds: 00
     condition:
@@ -210,7 +210,7 @@ automation:
 #******************************************************************************
   - alias: "Controlla ogni 9 minuti e spegne luci cucina"
     trigger:
-      platform: time
+      platform: time_pattern
       minutes: '/9'
       seconds: 00
     condition:
@@ -371,7 +371,7 @@ automation:
 #******************************************************************************
   - alias: "Controlla ogni 5 minuti e spegne luci corridoio"
     trigger:
-      platform: time
+      platform: time_pattern
       minutes: '/5'
       seconds: 00
     condition:
