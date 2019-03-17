@@ -23,6 +23,7 @@ input_select:
         - Vacation Mode
         - At home
         - Lights On
+        - Manual
     initial: Normal
     icon: mdi:home-variant
 #------------------------------------------------------------------------------

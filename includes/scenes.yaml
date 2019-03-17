@@ -284,6 +284,11 @@
     entities:
       input_boolean.termostato_bagno_interruttore: off
 #******************************************************************************
+  - name: Modalità Manuale
+    entities:
+      input_select.house_mode: 
+        option: 'Manual'
+#******************************************************************************
   - name: Modalità Normale
     entities:
       input_select.house_mode: 
