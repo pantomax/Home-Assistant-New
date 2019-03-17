@@ -286,25 +286,31 @@
 #******************************************************************************
   - name: Modalità Normale
     entities:
-      input_select.house_mode: 'Normal'
+      input_select.house_mode: 
+        option: 'Normal'
 #******************************************************************************
   - name: Modalità Cani
     entities:
-      input_select.house_mode: 'Dog Mode'
+      input_select.house_mode: 
+        option: 'Dog Mode'
 #******************************************************************************
   - name: Modalità Notturna
     entities:
-      input_select.house_mode: 'Night Mode'
+      input_select.house_mode: 
+        option: 'Night Mode'
 #******************************************************************************
   - name: Modalità Vacanza
     entities:
-      input_select.house_mode: 'Vacation Mode'
+      input_select.house_mode: 
+        option: 'Vacation Mode'
 #******************************************************************************
   - name: Modalità Luci Accese
     entities:
-      input_select.house_mode: 'Lights On'
+      input_select.house_mode: 
+        option: 'Lights On'
 #******************************************************************************
   - name: Modalità Luci Spente
     entities:
-      input_select.house_mode: 'Vacation Mode'
+      input_select.house_mode: 
+        option: 'Vacation Mode'
 #******************************************************************************

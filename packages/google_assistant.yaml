@@ -133,9 +133,9 @@ google_assistant:
         - entity t 20
     scene.corridoio_spento:
       expose: true
-      name: corridoio
+      name: corridoio spento
       aliases:
-        - luci nel corridoio
+        - luci spente nel corridoio
         - entity t 21
     scene.film:
       name: cinema
@@ -228,6 +228,43 @@ google_assistant:
       aliases:
         - canale sky news
         - entity t 34
+    scene.modalita_cani:
+      name: modalità cani
+      expose: true
+      aliases:
+        - dog mode
+        - entity t 35
+    scene.modalita_luci_accese:
+      name: modalità luci accese
+      expose: true
+      aliases: 
+        - modalità
+        - entity t 36
+    scene.modalita_luci_spente:
+      name: modalità
+      expose: true
+      aliases:
+        - lights on
+        - entity t 37
+    scene.modalita_normale:
+      name: modalità normale
+      expose: true
+      aliases:
+        - normal mode
+        - entity t 38
+    scene.modalita_notturna:
+      name: modalità nottura
+      expose: true
+      aliases:
+        - night mode
+        - entity t 39
+    scene.modalita_vacanza:
+      name: modalità vacanza
+      expose: true
+      aliases:
+        - holiday mode
+        - vacation mode
+        - entity t 40
 #******************************************************************************
 #*****************************   SWITCHES  ************************************
 #******************************************************************************
@@ -236,55 +273,61 @@ google_assistant:
       expose: true
       aliases:
         - ventola
-        - entity t 40
+        - entity t 50
     switch.tv:
       name: tv
       expose: true
       aliases:
         - il televisore
-        - entity t 41
+        - entity t 51
     switch.sky_ir_power:
       name: sky
       expose: true
       aliases:
         - il ricevitore di sky
-        - entity t 49
+        - entity t 52
     switch.sky_button_pause:
       name: pausa sky
       expose: true
       aliases:
         - pausa su ricevitore sky
-        - entity t 47
+        - entity t 53
     switch.sky_button_play:
       name: riproduci sky
       expose: true
       aliases:
         - riproduzione su ricevitore sky
-        - entity t 48
+        - entity t 54
     switch.accendi_termostato_dashboard_bagno:
       name: splitter 3
       expose: true
       aliases:
+        - scalda bagno
         - termoventilatore 3
-        - entity t 42
+        - termoventilatore bagno
+        - entity t 55
     switch.accendi_termostato_dashboard_salotto:
       name: splitter 1
       expose: true
       aliases:
+        - scalda salotto
         - termoventilatore 1
-        - entity t 43
+        - termoventilatore salotto
+        - entity t 56
     switch.accendi_termostato_dashboard_camera:
       name: splitter 2
       expose: true
       aliases:
+        - scalda camera
         - termoventilatore 2
-        - entity t 44
+        - termoventilatore camera
+        - entity t 57
     switch.tv_volume:
       name: volume
       expose: true
       aliases:
         - il volume
-        - entity t 45
+        - entity t 58
 #    switch.nabaztaglife:
 #      name: coniglio
 #      expose: true
@@ -294,6 +337,9 @@ google_assistant:
     switch.ventilatore_bagno:
       name: splitter 6
       expose: true
+      aliases:
+        - il volume
+        - entity t 59
 #******************************************************************************
 #******************************   SCRIPTS  ************************************
 #******************************************************************************
