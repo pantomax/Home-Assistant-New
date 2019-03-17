@@ -43,11 +43,22 @@ script:
       - service: light.turn_on
         data:
           entity_id: light.led_strip_salotto
-          state: on
           brightness: 255
           color_name: red
-      - service: switch.turn_on
-        entity_id: switch.corridoio_bagno
+      - service: light.turn_on
+        entity_id: group.luci_corridoio_e_bagno
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
       - service: light.turn_on
         data:
           entity_id: light.led_strip_salotto
@@ -63,6 +74,18 @@ script:
         data:
           entity_id: light.led_strip_salotto
           effect: red_strobe
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.chromecastaudiosalotto
+          volume_level: 0.5
       - service: media_player.play_media
         data:
           entity_id: media_player.chromecastaudiosalotto
@@ -91,6 +114,10 @@ script:
   pending_beep:
     alias: Pending Beep
     sequence:
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.chromecastaudiosalotto
+          volume_level: 0.5
       - service: media_player.play_media
         data:
           entity_id: media_player.chromecastaudiosalotto

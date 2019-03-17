@@ -17,9 +17,10 @@
     - platform: universal
       name: allmediaplayers
       children:
-        - media_player.bagno
         - media_player.chromecastvideosalotto
-        - media_player.cucina
+        - media_player.chromecastaudiobagno
+        - media_player.chromecastaudiocucina
+        - media_player.googlehomecamera
     - platform: kodi
       host: !secret zidoo
       username: !secret kodi_user
