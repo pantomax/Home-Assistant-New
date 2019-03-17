@@ -7,12 +7,6 @@ homeassistant:
   time_zone: Europe/Rome
   customize: !include includes/customize.yaml
   packages: !include_dir_named packages
-  auth_providers:
-   trusted_networks:
-     - 127.0.0.1
-     - ::1
-     - 192.168.1.0/24
-     - 192.168.0.0/24
 config:
 hassio:
 updater:
@@ -55,7 +49,12 @@ http:
    ip_ban_enabled: True
    login_attempts_threshold: 5
    api_password: !secret http_password
-
+auth_providers:
+   trusted_networks:
+     - 127.0.0.1
+     - ::1
+     - 192.168.1.0/24
+     - 192.168.0.0/24
 tts:
   - platform: google
     cache: true
