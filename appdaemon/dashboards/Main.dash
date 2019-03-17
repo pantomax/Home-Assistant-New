@@ -6,7 +6,7 @@ columns: 8
 layout:
     - clock(2x1), luci_cucina, apricancello, media_cucina(2x2), power_termostato, spegni_timer
     - weather(2x2),  luci_salotto, buona_notte, temperatura_impostata_termostato, living_temp
-    - luci_corridoio, stato_allarme, allarme, sens4, tempo_impostato_termostato, tempo_rimanenente
+    - luci_corridoio, allarme, radio_successiva, radio_spenta, tempo_impostato_termostato, tempo_rimanenente
     - include: bottom_panel
 weather:
     widget_type: weather
@@ -21,6 +21,19 @@ allarme:
 media_cucina:
     widget_type: media_player
     entity: media_player.chromecastaudiocucina
+radio_successiva:
+    widget_type: scene
+    title: Radio Successiva
+    icon_on: mdi-music
+    icon_off: mdi-music
+    entity: scene.radio_successiva_cucina
+
+radio_spenta:
+    widget_type: scene
+    title: Radio Spenta
+    icon_on: mdi-music-off
+    icon_off: mdi-music-off
+    entity: scene.spegni_musica_cucina
 laundry_humidity:
     widget_type: gauge
     title: Umidità
