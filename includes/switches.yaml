@@ -225,31 +225,31 @@
     host: !secret broadlink_sp_mini_1
     mac: !secret mac_broadlink_sp_mini_1
     type: sp3
-    friendly_name: 'Insettivoro'
+#    friendly_name: 'Insettivoro'
 #************************ PRESA SCRIVANIA *************************************
   - platform: broadlink
     host: !secret broadlink_sp_mini_2
     mac: !secret mac_broadlink_sp_mini_2
     type: sp3
-    friendly_name: 'Light Desk'
+#    friendly_name: 'Light Desk'
 #************************ PRESA CORRIDOIO PORTA *******************************
   - platform: broadlink
     host: !secret broadlink_sp_mini_3
     mac: !secret mac_broadlink_sp_mini_3
     type: sp3
-    friendly_name: 'Corridoio Porta'
+#    friendly_name: 'Corridoio Porta'
 #************************ PRESA CORRIDOIO BAGNO *******************************
   - platform: broadlink
     host: !secret broadlink_sp_mini_4
     mac: !secret mac_broadlink_sp_mini_4
     type: sp3
-    friendly_name: 'Corridoio Bagno'
+#    friendly_name: 'Corridoio Bagno'
 #***************************** PRESA CUCINA 2 *********************************
   - platform: broadlink
     host: !secret broadlink_outlet
     mac: !secret mac_broadlink_outlet
     type: sp2
-    friendly_name: 'Cucina 2'
+#    friendly_name: 'Cucina 2'
 #******************************** COMPUTER ************************************
   - platform: command_line
     switches:
@@ -260,7 +260,7 @@
     host: !secret computersalotto
     mac_address: !secret mac_computersalotto
   - platform: template
-    friendly_name: 'Accendi PC'
+#    friendly_name: 'Accendi PC'
     switches:
       windows:
         value_template: '{{ states.switch.windowswol.state }}'
