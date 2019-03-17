@@ -10,21 +10,7 @@
       - dns_queries_today
       - unique_clients
 #******************************************************************************
-  - platform: speedtestdotnet
-    minute: 30
-    hour:
-      - 0
-      - 3
-      - 6
-      - 9
-      - 12
-      - 15
-      - 18
-      - 21
-    monitored_conditions:
-      - ping
-      - download
-      - upload
+
 #******************************************************************************
 # Sensore Broadlink S1 custom component
   - platform: broadlink_s1c
