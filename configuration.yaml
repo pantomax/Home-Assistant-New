@@ -70,17 +70,7 @@ mqtt:
   port: 1883
   keepalive: 30
 speedtestdotnet:
-  scan_interval:
-    minutes: 30
-    hour:
-      - 0
-      - 3
-      - 6
-      - 9
-      - 12
-      - 15
-      - 18
-      - 21
+  scan_interval: '03:00'
   monitored_conditions:
     - ping
     - download
