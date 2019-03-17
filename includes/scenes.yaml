@@ -284,3 +284,27 @@
     entities:
       input_boolean.termostato_bagno_interruttore: off
 #******************************************************************************
+  - name: Modalità Normale
+    entities:
+      input_select.house_mode: 'Normal'
+#******************************************************************************
+  - name: Modalità Cani
+    entities:
+      input_select.house_mode: 'Dog Mode'
+#******************************************************************************
+  - name: Modalità Notturna
+    entities:
+      input_select.house_mode: 'Night Mode'
+#******************************************************************************
+  - name: Modalità Vacanza
+    entities:
+      input_select.house_mode: 'Vacation Mode'
+#******************************************************************************
+  - name: Modalità Luci Accese
+    entities:
+      input_select.house_mode: 'Lights On'
+#******************************************************************************
+  - name: Modalità Luci Spente
+    entities:
+      input_select.house_mode: 'Vacation Mode'
+#******************************************************************************
