@@ -5,16 +5,16 @@
 ###############################################################################
   - platform: pi_hole
 #    host: !secret panel_iframe_pi_hole_url
-    monitored_conditions:
-      - ads_blocked_today
-      - ads_percentage_today
-      - dns_queries_today
-      - domains_being_blocked
-      - queries_cached
-      - queries_forwarded
-      - unique_clients
-      - unique_domains
-      - clients_ever_seen
+#    monitored_conditions:
+#      - ads_blocked_today
+#      - ads_percentage_today
+#      - dns_queries_today
+#      - domains_being_blocked
+#      - queries_cached
+#      - queries_forwarded
+#      - unique_clients
+#      - unique_domains
+#      - clients_ever_seen
 #******************************************************************************
 
 #******************************************************************************
