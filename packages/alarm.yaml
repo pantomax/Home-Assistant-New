@@ -84,11 +84,11 @@ script:
           effect: red_strobe
       - service: media_player.volume_set
         data:
-          entity_id: media_player.chromecastaudiosalotto
+          entity_id: media_player.gruppo_casa
           volume_level: 0.5
       - service: media_player.play_media
         data:
-          entity_id: media_player.chromecastaudiosalotto
+          entity_id: media_player.gruppo_casa
           media_content_type: "AUDIO"
           media_content_id: !secret voyredalert
       - alias: All Lights On
@@ -116,11 +116,11 @@ script:
     sequence:
       - service: media_player.volume_set
         data:
-          entity_id: media_player.chromecastaudiosalotto
+          entity_id: media_player.gruppo_casa
           volume_level: 0.5
       - service: media_player.play_media
         data:
-          entity_id: media_player.chromecastaudiosalotto
+          entity_id: media_player.gruppo_casa
           media_content_type: "AUDIO"
           media_content_id: !secret alarm01
       - alias: call_loop

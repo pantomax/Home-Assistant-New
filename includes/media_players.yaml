@@ -17,7 +17,7 @@
     - platform: universal
       name: allmediaplayers
       children:
-        - media_player.chromecastvideosalotto
+        - media_player.chromecastaudiosalotto
         - media_player.chromecastaudiobagno
         - media_player.chromecastaudiocucina
         - media_player.googlehomecamera
