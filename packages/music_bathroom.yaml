@@ -168,3 +168,44 @@ automation:
         entity_id: input_number.numero_radio
         value: '1.0'
 #******************************************************************************
+  - alias: 'Riproduce musica in bagno con pulsante a muro'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.wallswitch_2_button_1
+        to: 'on'
+    action:
+      - service: mqtt.publish
+        data:
+          topic: 'sensors/rf/receiver'
+          payload: '1111111'
+          retain: 'true'
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.googlehomebagno
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
+      - service: script.turn_on
+        data:
+          entity_id: script.radio_successiva_con_dash_button
+
+  - alias: 'Ferma musica in bagno con pulsante a muro'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.wallswitch_2_button_2
+        to: 'on'
+    action:
+      - service: mqtt.publish
+        data:
+          topic: 'sensors/rf/receiver'
+          payload: '1111111'
+          retain: 'true'
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.googlehomebagno
+          media_content_type: "AUDIO"
+          media_content_id: !secret computerbeep_12
+      - service: script.turn_on
+        data:
+          entity_id: script.arresta_musica_con_dash_button
+
+
