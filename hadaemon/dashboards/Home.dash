@@ -13,7 +13,7 @@ layout:
     - mode(2x1), meteocamera(5x3), luci_salotto, sens2, scalda_salotto
     - weather(2x2), luci_bagno, sens7, scalda_bagno
     - luci_corridoio, sens6, sens3
-    - athome, lights_off,normal, dog, night, weekend, lights_on, sens5, buona_notte, sens4
+    - auto, manual, lights_on, lights_off, dog, night, weekend, sens5, buona_notte, sens4
     - include: bottom_panel
 veronanord:
     widget_type: camera
@@ -168,14 +168,38 @@ scalda_bagno:
     icon_on: mdi-fire
     icon_off: mdi-fire
     entity: switch.accendi_termostato_dashboard_bagno
-normal:
+auto:
     widget_type: mode
+    title: Automatic
     icon_on: mdi-progress-clock
     icon_off: mdi-progress-clock
-    title: Automatic Mode
     entity: input_select.house_mode
     mode: Automatic Mode
     script: script.normal_mode
+manual:
+    widget_type: mode
+    title: Manual
+    icon_on: mdi-home
+    icon_off: mdi-home
+    entity: input_select.house_mode
+    mode: Manual Mode
+    script: script.manual_mode
+lights_on:
+    widget_type: mode
+    title: Lights On
+    icon_on: mdi-lightbulb-outline
+    icon_off: mdi-lightbulb-outline
+    entity: input_select.house_mode
+    mode: Lights On Mode
+    script: script.lights_on_mode
+lights_off:
+    widget_type: mode
+    title: Lights Off
+    icon_on: fa-suitcase
+    icon_off: fa-suitcase
+    entity: input_select.house_mode
+    mode: Lights Off Mode
+    script: script.vacation_mode
 dog:
     widget_type: mode
     title: Dog
@@ -200,30 +224,6 @@ weekend:
     entity: input_select.house_mode
     mode: Weekend Mode
     script: script.weekend_mode
-athome:
-    widget_type: mode
-    title: At Home
-    icon_on: mdi-home
-    icon_off: mdi-home
-    entity: input_select.house_mode
-    mode: At home
-    script: script.athome_mode
-lights_off:
-    widget_type: mode
-    title: Lights Off
-    icon_on: fa-suitcase
-    icon_off: fa-suitcase
-    entity: input_select.house_mode
-    mode: Lights Off Mode
-    script: script.vacation_mode
-lights_on:
-    widget_type: mode
-    title: Lights On
-    icon_on: mdi-lightbulb-outline
-    icon_off: mdi-lightbulb-outline
-    entity: input_select.house_mode
-    mode: Lights On Mode
-    script: script.lights_on_mode
 locks_status:
     widget_type: binary_sensor
     title: All Locks

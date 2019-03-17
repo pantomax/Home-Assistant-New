@@ -109,12 +109,12 @@
           entity_id: input_select.house_mode
           option: "Weekend Mode"
 #******************************************************************************
-  athome_mode:
+  manual_mode:
     sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.house_mode
-          option: "At home"
+          option: "Manual Mode"
 #******************************************************************************
   vacation_mode:
     sequence:
