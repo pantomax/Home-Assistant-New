@@ -49,6 +49,7 @@ http:
    ip_ban_enabled: True
    login_attempts_threshold: 5
    api_password: !secret http_password
+auth_providers:
    trusted_networks:
      - 127.0.0.1
      - ::1
