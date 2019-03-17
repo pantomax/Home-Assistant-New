@@ -420,7 +420,7 @@
       sky_button_chan_down:
         command_on: 'JgBUAAoACL4JIAglBxgHWwooCCkJJAcdBwABpwkgCBgGGQcZBhkHVwgYCBcHAAprCCAIJQcZBlwIKQkpCCUIHAYAAaYLHwg8CDsIFwcZB1cIFwcZBwANBQAAAAA=='
         command_off: 'JgBUAAoACL4JIAglBxgHWwooCCkJJAcdBwABpwkgCBgGGQcZBhkHVwgYCBcHAAprCCAIJQcZBlwIKQkpCCUIHAYAAaYLHwg8CDsIFwcZB1cIFwcZBwANBQAAAAA=='
-      canale_su:giu:
+      canale_su_giu:
         command_on: 'JgBQAAkgCCUGGQdbCSkIKQglBx0HAAGnCSAIHAcYBxkHGAdTCBcHGQcACmoJIAglBxgHXAgpCCoIJQccBwABqAggCEAIOwgYBhkHUwgXBxkGAA0FAAAAAAAAAAA=='
         command_off: 'JgBUAAoACL4JIAglBxgHWwooCCkJJAcdBwABpwkgCBgGGQcZBhkHVwgYCBcHAAprCCAIJQcZBlwIKQkpCCUIHAYAAaYLHwg8CDsIFwcZB1cIFwcZBwANBQAAAAA=='
       sky_button_arrow_up:
