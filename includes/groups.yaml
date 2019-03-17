@@ -331,7 +331,7 @@
     control: hidden
     entities:
       - sensor.processor_use
-      - sensor.disk_use_percent_ 
+      - sensor.disk_use_percent 
       - sensor.memory_free
       - sensor.memory_use_percent
       - sensor.network_out_eth0
