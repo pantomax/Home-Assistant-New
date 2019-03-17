@@ -4,9 +4,9 @@ widget_margins: [10, 10]
 columns: 8
 
 layout:
-    - clock(2x1), luci_cucina, sens5, apricancello, buona_notte,stato_allarme, allarme
-    - weather(2x2),  luci_salotto, sens1, sens2, power_termostato, temperatura_impostata_termostato, living_temp
-    - luci_corridoio, sens3, sens4,spegni_timer, tempo_impostato_termostato, tempo_rimanenente
+    - clock(2x1), luci_cucina, apricancello, sens5, sens1,sens3, sens4
+    - weather(2x2),  luci_salotto, buona_notte, sens2, power_termostato, temperatura_impostata_termostato, living_temp
+    - luci_corridoio, stato_allarme, allarme,spegni_timer, tempo_impostato_termostato, tempo_rimanenente
     - include: bottom_panel
 weather:
     widget_type: weather
