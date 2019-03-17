@@ -170,8 +170,8 @@ scalda_bagno:
     entity: switch.accendi_termostato_dashboard_bagno
 normal:
     widget_type: mode
-    icon_on: mdi-clock
-    icon_off: mdi-clock
+    icon_on: mdi-progress-clock
+    icon_off: mdi-progress-clock
     title: Automatic Mode
     entity: input_select.house_mode
     mode: Automatic Mode
@@ -179,8 +179,8 @@ normal:
 dog:
     widget_type: mode
     title: Dog
-    icon_on: mdi-dog
-    icon_off: mdi-dog
+    icon_on: mdi-dog-side
+    icon_off: mdi-dog-side
     entity: input_select.house_mode
     mode: Dog Mode
     script: script.dog_mode
