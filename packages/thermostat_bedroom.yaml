@@ -87,7 +87,7 @@ sensor:
         value_template: "{{( states('input_number.countdown_camera') | int - 1 ) | int}}"
 #******************************************************************************
   - platform: broadlink
-    update_interval: 120
+    scan_interval: 120
     name: Temperatura camera per termostato
     host: !secret broadlink_rm_pro_2
     mac: !secret mac_broadlink_rm_pro_2
