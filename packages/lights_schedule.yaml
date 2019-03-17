@@ -11,8 +11,8 @@ binary_sensor:
       permetti_accensione_luci:
         value_template: >-
           {{  is_state('input_boolean.giorno', 'off')
-              and not is_state('input_select.house_mode', 'Manual')
-              and (is_state('input_select.house_mode', 'Normal')
+              and not is_state('input_select.house_mode', 'Manual Mode')
+              and (is_state('input_select.house_mode', 'Automatic Mode')
               or is_state('input_select.house_mode', 'At home')
               or is_state('input_select.house_mode', 'Lights On')
               or is_state('input_select.house_mode', 'Weekend Mode')) }}
@@ -21,7 +21,7 @@ binary_sensor:
       permetti_spegnimento_luci:
         value_template: >-
           {{  not is_state('input_select.house_mode', 'Lights On') 
-              and not is_state('input_select.house_mode', 'Manual')}}
+              and not is_state('input_select.house_mode', 'Manual Mode')}}
 
 #------------------------------------------------------------------------------
 timer:
@@ -251,7 +251,7 @@ automation:
     trigger:
       - platform: state
         entity_id: input_select.house_mode
-        to: 'Normal'
+        to: 'Automatic Mode'
       - platform: time
         at: '7:20:00'
       - platform: time
@@ -280,7 +280,7 @@ automation:
     trigger:
       - platform: state
         entity_id: input_select.house_mode
-        to: 'Normal'
+        to: 'Automatic Mode'
       - platform: time
         at: '7:50:00'
       - platform: time
@@ -707,7 +707,7 @@ automation:
         entity_id: binary_sensor.permetti_accensione_luci
         state: 'on'
       - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Manual') }}"
+        value_template: "{{ not is_state('input_select.house_mode', 'Manual Mode') }}"
     action:
       service: light.turn_on
       entity_id: light.luci_giardino_tutte
@@ -770,7 +770,7 @@ automation:
         entity_id: sensor.sunlight_pct
         below: 1
       - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Manual') }}"
+        value_template: "{{ not is_state('input_select.house_mode', 'Manual Mode') }}"
     action:
       service: light.turn_on
       entity_id: light.luci_giardino_tutte

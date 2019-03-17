@@ -86,7 +86,7 @@
       - service: input_select.select_option
         data:
           entity_id: input_select.house_mode
-          option: "Normal"
+          option: "Automatic Mode"
 #******************************************************************************
   dog_mode:
     sequence:

@@ -287,12 +287,12 @@
   - name: Modalità Manuale
     entities:
       input_select.house_mode: 
-        option: 'Manual'
+        option: 'Manual Mode'
 #******************************************************************************
-  - name: Modalità Normale
+  - name: Modalità Automatica
     entities:
       input_select.house_mode: 
-        option: 'Normal'
+        option: 'Automatic Mode'
 #******************************************************************************
   - name: Modalità Cani
     entities:
@@ -318,4 +318,9 @@
     entities:
       input_select.house_mode: 
         option: 'Vacation Mode'
+#******************************************************************************
+  - name: Modalità Manuale
+    entities:
+      input_select.house_mode: 
+        option: 'Manual Mode'
 #******************************************************************************

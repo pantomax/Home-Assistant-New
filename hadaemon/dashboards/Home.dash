@@ -172,9 +172,9 @@ normal:
     widget_type: mode
     icon_on: mdi-clock
     icon_off: mdi-clock
-    title: Normal
+    title: Automatic Mode
     entity: input_select.house_mode
-    mode: Normal
+    mode: Automatic Mode
     script: script.normal_mode
 dog:
     widget_type: mode

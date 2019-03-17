@@ -16,20 +16,20 @@ input_select:
   house_mode:
     name: Modalità Casa 
     options:
-        - Normal
+        - Automatic Mode
         - Dog Mode
         - Night Mode
         - Weekend Mode
         - Vacation Mode
         - At home
         - Lights On
-        - Manual
-    initial: Normal
+        - Manual Mode
+    initial: Automatic Mode
     icon: mdi:home-variant
 #------------------------------------------------------------------------------
 automation:
 #------------------------------------------------------------------------------
-  - alias: Attiva House Mode - Normal
+  - alias: Attiva House Mode - Automatic Mode
     trigger:
       - platform: time
         at: '07:10:00'
@@ -59,7 +59,7 @@ automation:
       - service: input_select.select_option
         data:
           entity_id: input_select.house_mode
-          option: "Normal"
+          option: "Automatic Mode"
 #******************************************************************************
   - alias: Attiva House Mode - Dog Mode
     trigger:
@@ -81,7 +81,7 @@ automation:
         conditions:
         - condition: state
           entity_id: input_select.house_mode
-          state: "Normal"
+          state: "Automatic Mode"
         - condition: state
           entity_id: input_select.house_mode
           state: "Night Mode"
@@ -100,7 +100,7 @@ automation:
       conditions:
       - condition: state
         entity_id: input_select.house_mode
-        state: "Normal"
+        state: "Automatic Mode"
       - condition: state
         entity_id: input_select.house_mode
         state: "Dog Mode"
@@ -131,7 +131,7 @@ automation:
           state: "Dog Mode"
         - condition: state
           entity_id: input_select.house_mode
-          state: "Normal"
+          state: "Automatic Mode"
         - condition: state
           entity_id: input_select.house_mode
           state: "Night Mode"

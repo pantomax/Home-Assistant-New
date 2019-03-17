@@ -265,6 +265,12 @@ google_assistant:
         - holiday mode
         - vacation mode
         - entity t 40
+    scene.modalita_manuale:
+      name: modalità manuale
+      expose: true
+      aliases:
+        - manual mode
+        - entity t 41
 #******************************************************************************
 #*****************************   SWITCHES  ************************************
 #******************************************************************************
