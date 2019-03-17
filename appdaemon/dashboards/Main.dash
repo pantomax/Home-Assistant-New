@@ -19,6 +19,7 @@ allarme:
     widget_type: alarm
     entity: alarm_control_panel.home_alarm
 media_cucina:
+    widget_type: media_player
     entity: media_player.chromecastaudiocucina
 laundry_humidity:
     widget_type: gauge
