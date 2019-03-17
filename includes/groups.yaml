@@ -127,7 +127,7 @@
     name: Controlli Bagno
     control: hidden
     entities:
-      - media_player.bagno
+      - media_player.chromecastaudiobagno
       - scene.spegni_musica
       - scene.radio_successiva
       - input_boolean.termostato_bagno_interruttore
@@ -547,7 +547,7 @@
     name: Cucina
     view: yes
     entities:
-      - media_player.cucina
+      - media_player.chromecastaudiocucina
       - group.kitchen
       - group.media_cucina
       - input_text.hassio_voice
@@ -563,7 +563,7 @@
       - group.media_bagno
       - group.radio
       - history_graph.temperatura_e_umidita_bagno
-      - media_player.bagno
+      - media_player.chromecastaudiobagno
       - timer.bagno
       - group.led_strip_controller_bagno
       - group.bathroom_lights
@@ -587,8 +587,9 @@
       - group.media_salotto_2
       - media_player.kodi
       - media_player.chromecastvideosalotto
-      - media_player.bagno
-      - media_player.cucina
+      - media_player.chromecastaudiosalotto
+      - media_player.chromecastaudiocucina
+      - media_player.chromecastaudiobagno
       - media_player.plex_web_chrome
       - group.telecomando_tv
       - group.tastierino_sky
