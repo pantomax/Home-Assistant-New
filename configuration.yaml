@@ -20,7 +20,7 @@ downloader:
 logbook:
   exclude:
     entities:
-      - sensor.speedtest
+      - sensor.speedtestdotnet
       - sensor.wunderground
       - sensor.darksky
       - sensor.systemmonitor

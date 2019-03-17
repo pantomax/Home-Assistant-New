@@ -10,7 +10,7 @@
       - dns_queries_today
       - unique_clients
 #******************************************************************************
-  - platform: speedtest
+  - platform: speedtestdotnet
     minute: 30
     hour:
       - 0
