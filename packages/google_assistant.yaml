@@ -238,13 +238,13 @@ google_assistant:
       name: modalità luci accese
       expose: true
       aliases: 
-        - modalità
+        - lights on
         - entity t 36
     scene.modalita_luci_spente:
       name: modalità
       expose: true
       aliases:
-        - lights on
+        - lights off
         - entity t 37
     scene.modalita_normale:
       name: modalità normale
