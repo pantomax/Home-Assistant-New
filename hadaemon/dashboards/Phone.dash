@@ -74,11 +74,11 @@ buona_notte:
     entity: scene.buona_notte
 lights_on:
     widget_type: mode
-    title: Lights On
+    title: Lights On 
     icon_on: mdi-lightbulb-outline
     icon_off: mdi-lightbulb-outline
     entity: input_select.house_mode
-    mode: Lights On
+    mode: Lights On Mode
     script: script.lights_on_mode
 apri_cancello:
     widget_type: script

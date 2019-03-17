@@ -17,13 +17,13 @@ input_select:
     name: Modalità Casa 
     options:
         - Automatic Mode
+        - Manual Mode
         - Dog Mode
         - Night Mode
         - Weekend Mode
-        - Vacation Mode
+        - Lights On Mode
+        - Lights Off Mode
         - At home
-        - Lights On
-        - Manual Mode
     initial: Automatic Mode
     icon: mdi:home-variant
 #------------------------------------------------------------------------------

@@ -14,13 +14,13 @@ binary_sensor:
               and not is_state('input_select.house_mode', 'Manual Mode')
               and (is_state('input_select.house_mode', 'Automatic Mode')
               or is_state('input_select.house_mode', 'At home')
-              or is_state('input_select.house_mode', 'Lights On')
+              or is_state('input_select.house_mode', 'Lights On Mode')
               or is_state('input_select.house_mode', 'Weekend Mode')) }}
   - platform: template
     sensors:
       permetti_spegnimento_luci:
         value_template: >-
-          {{  not is_state('input_select.house_mode', 'Lights On') 
+          {{  not is_state('input_select.house_mode', 'Lights On Mode') 
               and not is_state('input_select.house_mode', 'Manual Mode')}}
 
 #------------------------------------------------------------------------------
@@ -161,7 +161,7 @@ automation:
     - condition: and
       conditions:
       - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights Off Mode') }}"
       - condition: state
         entity_id: binary_sensor.permetti_accensione_luci
         state: 'on'
@@ -240,7 +240,7 @@ automation:
     trigger:
       - platform: state
         entity_id: input_select.house_mode
-        to: 'Lights On'
+        to: 'Lights On Mode'
     action:
       - service: input_number.set_value
         data_template:
@@ -323,7 +323,7 @@ automation:
     - condition: and
       conditions:
       - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights Off Mode') }}"
       - condition: template
         value_template: "{{ not is_state('input_select.house_mode', 'Dog Mode') }}"
       - condition: time
@@ -413,7 +413,7 @@ automation:
     - condition: and
       conditions:
       - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights Off Mode') }}"
       - condition: time
         after: '00:00:00'
         before: '7:00:00'
@@ -503,7 +503,7 @@ automation:
     - condition: and
       conditions:
       - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights Off Mode') }}"
       - condition: state
         entity_id: binary_sensor.sveglia_luminosa
         state: 'on'
@@ -548,7 +548,7 @@ automation:
     - condition: and
       conditions:
       - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights Off Mode') }}"
     action:
       - service: light.turn_on
         entity_id: light.light_desk
@@ -577,7 +577,7 @@ automation:
     - condition: and
       conditions:
       - condition: template
-        value_template: "{{ not is_state('input_select.house_mode', 'Vacation Mode') }}"
+        value_template: "{{ not is_state('input_select.house_mode', 'Lights Off Mode') }}"
       - condition: time
         after: '7:20:00'
         before: '00:00:00'

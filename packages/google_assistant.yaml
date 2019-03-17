@@ -238,7 +238,7 @@ google_assistant:
       name: modalità luci accese
       expose: true
       aliases: 
-        - lights on
+        - Lights On Mode
         - entity t 36
     scene.modalita_luci_spente:
       name: modalità luci spente
@@ -264,7 +264,7 @@ google_assistant:
       expose: true
       aliases:
         - holiday mode
-        - vacation mode
+        - Lights Off mode
         - entity t 40
     scene.modalita_manuale:
       name: modalità manuale

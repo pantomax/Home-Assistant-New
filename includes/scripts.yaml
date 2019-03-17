@@ -121,14 +121,14 @@
       - service: input_select.select_option
         data:
           entity_id: input_select.house_mode
-          option: "Vacation Mode"
+          option: "Lights Off Mode"
 #******************************************************************************
   lights_on_mode:
     sequence:
       - service: input_select.select_option
         data:
           entity_id: input_select.house_mode
-          option: "Lights On"
+          option: "Lights On Mode"
 #******************************************************************************
   apricancello:
     sequence:

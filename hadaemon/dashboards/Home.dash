@@ -13,7 +13,7 @@ layout:
     - mode(2x1), meteocamera(5x3), luci_salotto, sens2, scalda_salotto
     - weather(2x2), luci_bagno, sens7, scalda_bagno
     - luci_corridoio, sens6, sens3
-    - athome, vacation,normal, dog, night, weekend, lights_on, sens5, buona_notte, sens4
+    - athome, lights_off,normal, dog, night, weekend, lights_on, sens5, buona_notte, sens4
     - include: bottom_panel
 veronanord:
     widget_type: camera
@@ -208,13 +208,13 @@ athome:
     entity: input_select.house_mode
     mode: At home
     script: script.athome_mode
-vacation:
+lights_off:
     widget_type: mode
-    title: Vacation
+    title: Lights Off
     icon_on: fa-suitcase
     icon_off: fa-suitcase
     entity: input_select.house_mode
-    mode: Vacation Mode
+    mode: Lights Off Mode
     script: script.vacation_mode
 lights_on:
     widget_type: mode
@@ -222,7 +222,7 @@ lights_on:
     icon_on: mdi-lightbulb-outline
     icon_off: mdi-lightbulb-outline
     entity: input_select.house_mode
-    mode: Lights On
+    mode: Lights On Mode
     script: script.lights_on_mode
 locks_status:
     widget_type: binary_sensor

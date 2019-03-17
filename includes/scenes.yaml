@@ -307,17 +307,17 @@
   - name: Modalità Vacanza
     entities:
       input_select.house_mode: 
-        option: 'Vacation Mode'
+        option: 'Lights Off Mode'
 #******************************************************************************
   - name: Modalità Luci Accese
     entities:
       input_select.house_mode: 
-        option: 'Lights On'
+        option: 'Lights On Mode'
 #******************************************************************************
   - name: Modalità Luci Spente
     entities:
       input_select.house_mode: 
-        option: 'Vacation Mode'
+        option: 'Lights Off Mode'
 #******************************************************************************
   - name: Modalità Manuale
     entities:

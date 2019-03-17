@@ -68,7 +68,7 @@ script:
           entity_id: media_player.chromecastaudiosalotto
           media_content_type: "AUDIO"
           media_content_id: !secret voyredalert
-      - alias: All lights On
+      - alias: All Lights On
         service: light.turn_on
       - delay:
           seconds: 1
