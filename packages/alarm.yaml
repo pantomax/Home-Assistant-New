@@ -91,12 +91,18 @@ script:
           entity_id: media_player.gruppo_casa
           media_content_type: "AUDIO"
           media_content_id: !secret voyredalert
-      - alias: All Lights On
-        service: light.turn_on
+      - service: light.turn_on
+        data:
+          entity_id: light.tavolino_2
+          brightness: 255
+          color_name: red
       - delay:
-          seconds: 1
-      - alias: All Lights Off
-        service: light.turn_off
+          seconds: 2
+      - service: light.turn_off
+        data:
+          entity_id: light.tavolino_2
+          brightness: 255
+          color_name: red
       - alias: call_loop
         service: script.turn_on
         data:
