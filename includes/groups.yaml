@@ -125,7 +125,7 @@
     name: Controlli Bagno
     control: hidden
     entities:
-      - media_player.chromecastaudiobagno
+      - media_player.chromecastaudiobagno_2
       - scene.spegni_musica
       - scene.radio_successiva
       - input_boolean.termostato_bagno_interruttore
@@ -562,7 +562,7 @@
       - group.media_bagno
       - group.radio
       - history_graph.temperatura_e_umidita_bagno
-      - media_player.chromecastaudiobagno
+      - media_player.chromecastaudiobagno_2
       - timer.bagno
       - group.led_strip_controller_bagno
       - group.bathroom_lights
@@ -588,7 +588,7 @@
       - media_player.chromecastvideosalotto
       - media_player.chromecastaudiosalotto
       - media_player.chromecastaudiocucina
-      - media_player.chromecastaudiobagno
+      - media_player.chromecastaudiobagno_2
       - media_player.plex_web_chrome
       - group.telecomando_tv
       - group.tastierino_sky
