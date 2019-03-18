@@ -5,8 +5,8 @@ columns: 8
 
 layout:
     - media_bagno(2x2),luce_bagno, laundry_overhead_switch, clock(2x1), laundry_humidity 
-    - luce_cucina, buona_notte, power_termostato, temperatura_impostata_termostato, laundry_temp, piu_manuale, meno_manuale
-    - radio_successiva, radio_spenta, spegni_timer, tempo_impostato_termostato, tempo_rimanenente, timer_manuale, basculante_manuale
+    - luce_cucina, buona_notte, power_termostato, temperatura_impostata_termostato, laundry_temp
+    - radio_successiva, radio_spenta, spegni_timer, tempo_impostato_termostato, tempo_rimanenente, piu_manuale, meno_manuale
     - include: bottom_panel
 
 clock:
