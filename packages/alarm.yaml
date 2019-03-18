@@ -35,53 +35,9 @@ script:
   flash_rooms_alarm:
     alias: Flash Room alarm On
     sequence:
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: alarm_control_panel.home_alarm
-            state: 'triggered'
-      - service: light.turn_on
-        data:
-          entity_id: light.led_strip_salotto
-          brightness: 255
-          color_name: red
-      - service: light.turn_on
-        entity_id: group.luci_corridoio_e_bagno
-      - service: light.turn_on
-        data:
-          entity_id: light.led_strip_salotto
-          effect: red_strobe
-      - service: light.turn_on
-        data:
-          entity_id: light.led_strip_salotto
-          effect: red_strobe
-      - service: light.turn_on
-        data:
-          entity_id: light.led_strip_salotto
-          effect: red_strobe
-      - service: light.turn_on
-        data:
-          entity_id: light.led_strip_salotto
-          effect: red_strobe
-      - service: light.turn_off
-        data:
-          entity_id: light.led_strip_salotto
-      - service: light.turn_on
-        data:
-          entity_id: light.led_strip_salotto
-          brightness: 0
-      - service: light.turn_on
-        data:
-          entity_id: light.led_strip_salotto
-          effect: red_strobe
-      - service: light.turn_on
-        data:
-          entity_id: light.led_strip_salotto
-          effect: red_strobe
-      - service: light.turn_on
-        data:
-          entity_id: light.led_strip_salotto
-          effect: red_strobe
+      - condition: state
+        entity_id: alarm_control_panel.home_alarm
+        state: 'triggered'
       - service: media_player.volume_set
         data:
           entity_id: media_player.gruppo_casa
@@ -93,6 +49,59 @@ script:
           media_content_id: !secret voyredalert
       - service: light.turn_on
         data:
+          entity_id: light.led_strip_salotto
+          white_value: 0
+          brightness: 255
+          color_name: red
+      - service: light.turn_on
+        entity_id: group.luci_corridoio_e_bagno
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - delay:
+          seconds: 1
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - delay:
+          seconds: 1
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - delay:
+          seconds: 1
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - delay:
+          seconds: 1
+      - service: light.turn_off
+        data:
+          entity_id: light.led_strip_salotto
+      - delay:
+          seconds: 1
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - delay:
+          seconds: 1
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - delay:
+          seconds: 1
+      - service: light.turn_on
+        data:
+          entity_id: light.led_strip_salotto
+          effect: red_strobe
+      - service: light.turn_on
+        data:
           entity_id: light.tavolino_2
           brightness: 255
           color_name: red
@@ -101,8 +110,6 @@ script:
       - service: light.turn_off
         data:
           entity_id: light.tavolino_2
-          brightness: 255
-          color_name: red
       - alias: call_loop
         service: script.turn_on
         data:
@@ -137,11 +144,9 @@ script:
   repeat_pending_beep:
     alias: Repeat Pending Beep
     sequence:
-      - condition: or
-        conditions:
-          - condition: state
-            entity_id: alarm_control_panel.home_alarm
-            state: 'pending'
+      - condition: state
+        entity_id: alarm_control_panel.home_alarm
+        state: 'pending'
       - delay:
           seconds: 1
       - service: script.turn_on
