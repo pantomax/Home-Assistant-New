@@ -20,7 +20,7 @@ laundry_humidity:
     min: 0
     entity: sensor.sensore_humidity
 media_bagno:
-    title: "Radio Cucina"
+    title: "Radio Bagno"
     widget_type: media_player
     entity: media_player.chromecastaudiobagno_2
 laundry_temp:
