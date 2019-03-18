@@ -22,7 +22,7 @@ laundry_humidity:
 media_bagno:
     title: "Radio Cucina"
     widget_type: media_player
-    entity: media_player.chromecastaudiobagno
+    entity: media_player.chromecastaudiobagno_2
 laundry_temp:
     widget_type: sensor
     title: Temperatura Attuale
