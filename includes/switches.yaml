@@ -9,6 +9,7 @@
       luci_cucina_tutte:
         value_template: >-
           {% if (is_state('light.light_kitchen','on')) or
+          (is_state('light.tavolino','on')) or
           (is_state('light.light_kitchen_2','on')) %} 
           on
           {% else %}
@@ -21,6 +22,9 @@
         - service: light.turn_on
           data:
             entity_id: light.light_kitchen_2
+        - service: light.turn_on
+          data:
+            entity_id: light.tavolino
         turn_off:
         - service: light.turn_off
           data:
@@ -28,13 +32,15 @@
         - service: light.turn_off
           data:
             entity_id: light.light_kitchen_2
+        - service: light.turn_off
+          data:
+            entity_id: light.tavolino
 #*************************** TUTTE LUCI SALOTTO ****************************
   - platform: template
     switches:
       luci_salotto_tutte:
         value_template: >-
-          {% if (is_state('light.tavolino','on')) or
-          (is_state('light.tavolino_2','on')) or
+          {% if (is_state('light.tavolino_2','on')) or
           (is_state('light.libreria','on')) or
           (is_state('light.soffitto','on')) or
           (is_state('light.mobile_tv','on')) or
@@ -49,7 +55,7 @@
         turn_on:
         - service: light.turn_on
           data:
-            entity_id: light.tavolino
+            entity_id: light.tavolino_2
         - service: light.turn_on
           data:
             entity_id: light.libreria
@@ -74,7 +80,7 @@
         turn_off:
         - service: light.turn_off
           data:
-            entity_id: light.tavolino
+            entity_id: light.tavolino_2
         - service: light.turn_off
           data:
             entity_id: light.libreria
