@@ -57,6 +57,7 @@
     entities:
       - light.light_kitchen
       - light.light_kitchen_2
+      - light.tavolino
   Luci_Corridoio_e_Bagno:
     name: Luci Corridorio
     entities:
