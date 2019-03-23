@@ -87,7 +87,7 @@ google_assistant:
       expose: true
       aliases:
         - luce sul forno
-        - entity t 1
+        - entity t 11
 #    light.tv:
 #      name: retro tv
 #      expose: true
