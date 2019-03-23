@@ -82,6 +82,12 @@ google_assistant:
       aliases:
         - luce blu nel corridoio
         - entity t 10
+    light.tavolino:
+      name: microonde
+      expose: true
+      aliases:
+        - luce sul forno
+        - entity t 1
 #    light.tv:
 #      name: retro tv
 #      expose: true
