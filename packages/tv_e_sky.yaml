@@ -386,6 +386,10 @@ automation:
       - platform: state
         entity_id: input_boolean.guarda_tv
         to: 'on'
+    condition:
+      - condition: state
+        entity_id: sensor.chromecast_video_salotto_nuovo
+        state: 'Offline'
     action:
         service: script.turn_on
         entity_id: script.sky_on
@@ -395,6 +399,10 @@ automation:
       - platform: state
         entity_id: input_boolean.guarda_tv
         to: 'off'
+    condition:
+      - condition: state
+        entity_id: sensor.chromecast_video_salotto_nuovo
+        state: 'Online'
     action:
         service: script.turn_on
         entity_id: script.sky_off
