@@ -46,7 +46,7 @@ logger:
 #    custom_components.sensor.broadlink_s1c: debug
 #    homeassistant.components: info
 #    homeassistant.components.http: debug
-#    homeassistant.components.dialogflow: debug
+#    homeassistant.components.dialogflow: debug 
 recorder:
   purge_interval: 7
   purge_keep_days: 7
