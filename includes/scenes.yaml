@@ -183,7 +183,10 @@
   - name: Foresta
     entities:
       switch.input_hdmi2: on
-      light.tavolino_2: off
+      light.tavolino_2:         
+        state: on
+        brightness: 255
+        color_name: green
       light.libreria: off
       light.soffitto: on
       light.mobile_tv: on

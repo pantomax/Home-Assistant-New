@@ -40,6 +40,8 @@
         - switch.accendi_termostato_dashboard_bagno
         - switch.accendi_termostato_dashboard_salotto
         - switch.accendi_termostato_dashboard_camera
+        - switch.accendi_ac_dashboard_salotto
+        - switch.accendi_ac_dashboard_camera
         - switch.tv_volume
 #        - switch.nabaztaglife
         - switch.ventilatore_bagno
@@ -259,11 +261,13 @@
       switch.accendi_termostato_dashboard_salotto:
         name: scalda il salotto
         aliases:
+          - raffredda salotto
           - termoventilatore 1
           - entity t 43
       switch.accendi_termostato_dashboard_camera:
         name: scalda la camera
         aliases:
+          - raffredda camera
           - termoventilatore 2
           - entity t 44
       switch.tv_volume:
