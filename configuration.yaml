@@ -56,8 +56,8 @@ http:
    ssl_certificate: /ssl/fullchain.pem
    ssl_key: /ssl/privkey.pem
    ip_ban_enabled: True
-   login_attempts_threshold: 5
-   api_password: !secret http_password
+   login_attempts_threshold: 10
+#   api_password: !secret http_password
 
 tts:
   - platform: google_translate
