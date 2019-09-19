@@ -3,22 +3,22 @@
 #                                 PANEL IFRAMES
 #
 ###############################################################################
-  ide:
-    title: IDE
-    icon: mdi:code-braces
-    url: !secret panel_iframe_ide_url
+#  ide:
+#    title: IDE
+#    icon: mdi:code-braces
+#    url: !secret panel_iframe_ide_url
 #  configurator:
 #    title: Configurator
 #    icon: mdi:wrench
 #    url: !secret panel_iframe_configurator_url
-  logviewer:
-    title: Log Viewer
-    icon: mdi:wrench
-    url: !secret panel_iframe_log_viewer_url
-  terminal:
-    title: Terminal
-    icon: mdi:console-line
-    url: !secret panel_iframe_terminal_url
+#  logviewer:
+#    title: Log Viewer
+#    icon: mdi:wrench
+#    url: !secret panel_iframe_log_viewer_url
+#  terminal:
+#    title: Terminal
+#    icon: mdi:console-line
+#    url: !secret panel_iframe_terminal_url
 #  kodi:
 #    title: Kodi
 #    icon: mdi:movie
@@ -27,8 +27,8 @@
     title: Pi-hole
     icon: mdi:block-helper
     url: !secret panel_iframe_pi_hole_url
-  influxdb:
-    title: InfluxDB
-    icon: mdi:graphql
-    url: !secret panel_iframe_influxdb_url
+#  influxdb:
+#    title: InfluxDB
+#    icon: mdi:graphql
+#    url: !secret panel_iframe_influxdb_url
 #******************************************************************************

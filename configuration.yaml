@@ -76,8 +76,7 @@ speedtestdotnet:
     - download
     - upload
 
-
-
+#P6WEtYZWbcrc0fju
 ############
 # Includes
 ############
@@ -86,6 +85,8 @@ android_ip_webcam: !include includes/android_ip_webcams.yaml
 automation: !include includes/automations.yaml
 binary_sensor: !include includes/binary_sensor.yaml
 camera: !include includes/cameras.yaml
+cast: !include includes/media_players.yaml
+cloud: !include includes/cloud.yaml
 device_tracker: !include includes/device_trackers.yaml
 frontend: !include includes/frontend.yaml
 group: !include includes/groups.yaml
@@ -98,7 +99,6 @@ input_number: !include includes/input_number.yaml
 input_select: !include includes/input_select.yaml
 intent_script: !include includes/intent_scripts.yaml
 light: !include includes/light.yaml
-cast: !include includes/media_players.yaml
 notify: !include includes/notify.yaml
 panel_iframe: !include includes/panel_iframes.yaml
 scene: !include includes/scenes.yaml
@@ -108,4 +108,3 @@ switch: !include includes/switches.yaml
 tradfri: !include includes/tradfri.yaml
 weblink: !include includes/weblinks.yaml
 zone: !include includes/zones.yaml
-cloud: !include includes/cloud.yaml
