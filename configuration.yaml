@@ -101,6 +101,7 @@ intent_script: !include includes/intent_scripts.yaml
 light: !include includes/light.yaml
 notify: !include includes/notify.yaml
 panel_iframe: !include includes/panel_iframes.yaml
+pi_hole: !include includes/pi_hole.yaml
 scene: !include includes/scenes.yaml
 script: !include includes/scripts.yaml
 sensor: !include includes/sensors.yaml
