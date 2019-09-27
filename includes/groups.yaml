@@ -597,7 +597,7 @@
   Tab_Meteo:
     name: Meteo
     view: yes
-    icon: mdi:weather-partlycloudy
+    icon: mdi:weather-partly-cloudy
     entities:
       - group.lights_allowed
       - group.sole
